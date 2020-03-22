@@ -1,0 +1,48 @@
+@-ms-viewport{
+	width: device-width;
+	height: device-height;
+}
+body{
+	background-image: url("/assets/backgrounds/BournemouthHDD.jpg");
+	font-family: 'Rubik', sans-serif;
+	color:white;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+/* Style the top navigation bar */
+.navigation_bar {
+  overflow: hidden;
+  background-color: #333;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+}
+/* Style the topnav links */
+.navigation_bar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+/* Change color on hover */
+.navigation_bar a:hover {
+  background-color: #c239b3;
+  color: white;
+}
+.center_box {
+	position: relative;
+ 	margin: auto;
+	padding: 5%;	
+	text-align:center;
+}
+#icon{
+	width:auto;
+	height:25%;
+}
+.social_links img{
+	padding:2%;
+	width:auto;
+	height: 5%;
+}

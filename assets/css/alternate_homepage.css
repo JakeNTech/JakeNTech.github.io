@@ -1,0 +1,48 @@
+@-ms-viewport{
+  width: device-width;
+  height: device-height;
+}
+body{
+	background-image:url('https://media1.tenor.com/images/e755facae5d6ae0d6dc80b6a874a7918/tenor.gif');
+	font-family: 'Rubik', sans-serif;
+	color:white;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+/* Style the top navigation bar */
+.navigation_bar {
+  overflow: hidden;
+  background-color: #333;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+}
+/* Style the topnav links */
+.navigation_bar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+/* Change color on hover */
+.navigation_bar a:hover {
+  background-color: #c239b3;
+  color: white;
+}
+.center_box {
+	position: relative;
+ 	margin: auto;
+	width: 60%;
+	padding: 5%;	
+	text-align:center;
+}
+.icon{
+	width:auto;
+	height:20%;
+}
+.social_icons img{
+	padding:15px;
+	width:auto;
+	height: 5%;
+}
