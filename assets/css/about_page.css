@@ -3,7 +3,7 @@
   height: device-height;
 }
 body{
-	background-image: url("/assets/backgrounds/Beach_Feet.jpg");
+	background-image: url("./assets/backgrounds/Boscombe_Pier_March_2020.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
