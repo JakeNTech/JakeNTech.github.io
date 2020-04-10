@@ -3,7 +3,7 @@
 	height: device-height;
 }
 body{
-	background-image: url("/assets/backgrounds/Beach_Sun.jpg");
+	background-image: url("/assets/backgrounds/BournemouthHDD.jpg");
 	font-family: 'Rubik', sans-serif;
 	color:white;
 	background-size: cover;
@@ -18,7 +18,7 @@ body{
 }
 #icon{
 	width:auto;
-	height:25%;
+	height:20%;
 }
 .social_links img{
 	padding:2%;
@@ -26,5 +26,5 @@ body{
 	height: 5%;
 }
 #title{
-	color: #e5559b
+	color: #f77db6;
 }

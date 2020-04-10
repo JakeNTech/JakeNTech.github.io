@@ -40,3 +40,4 @@ function hahahfunny(){
     }
     document.getElementById("tagline").innerHTML = newtext;
 }
+hahahfunny()

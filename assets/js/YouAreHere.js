@@ -197,3 +197,4 @@ function whereIsThatBoi(){
     }
     document.getElementById("top_secret_location").innerHTML = findme;
 }
+whereIsThatBoi()
