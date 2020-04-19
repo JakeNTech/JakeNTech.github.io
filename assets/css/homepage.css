@@ -20,6 +20,11 @@ body{
 	width:auto;
 	height:20%;
 }
+.locate_me{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 .social_links img{
 	padding:2%;
 	width:auto;

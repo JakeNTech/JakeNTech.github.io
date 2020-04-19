@@ -3,13 +3,14 @@
 	<meta charset="utf-8">
 	<title>JakeNTech</title>
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
-	<link href="https://fonts.googleapis.com/css?family=Rubik:400,700&display=swap" rel="stylesheet">
-	<link rel="shortcut icon" href="./assets/favicon.jpg"/>
+	<link rel="shortcut icon" href="/assets/favicon.jpg"/>
+	<!--Local CSS Sheets-->
 	<link rel="stylesheet" media="screen" href="/assets/css/homepage.css">
 	<link rel="stylesheet" media="screen" href="/assets/css/menu_bar.css">
-	<meta name="keywords" content="JakeNTech,Ducks">
+	<!--Google Style Sheets Icons + Font-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Rubik:400,700&display=swap" rel="stylesheet">
     <meta name="author" content="JakeNTech">
-    <meta name="desciption" content="A website for JakeNTech. Here you can read about the story of the duck!">
 </head>
 <body>
 	<div class="navigation_bar">
@@ -20,6 +21,9 @@
 		<img src="/assets/social_icons/SocialMediaProfilePicture.png" alt="You are not missing much! Just a small picture of me!" id="icon" title="Its a Jake!">
 		<h2 id="title">Jake Nenadic</h2>
 		<p id="tagline" onclick="hahahfunny()">Hello!</p>
+		<div class="locate_me">
+			<i class="material-icons md-light md-36" id="locaiton_icon" onclick="whereIsThatBoi()" title="Click to refresh location!">my_location</i>
+		</div>
 		<!--It isn't really...there is no tresure! Sorry to disspoint!-->
 		<div class="social_links">
 			<a href="https://twitter.com/JakeNTech"><img src="/assets/social_icons/Twitter_Logo_Blue_MODIFIED.png" alt="Twitter!" title="Follow me on Twitter!"></a>
@@ -31,5 +35,6 @@
 		</div>
 	</div>
 	<script src="/assets/js/TagLine.js"></script>
+	<script src="assets/js/YouAreHere.js"></script>
 </body>
 </html>
