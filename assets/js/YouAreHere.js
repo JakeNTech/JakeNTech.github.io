@@ -3,7 +3,7 @@ function getRndInteger(min, max) {
 }
 function whereIsThatBoi(){
     var findme ="";
-    switch (getRndInteger(0,61)) {
+    switch (getRndInteger(0,56)) {
         case 0:
             findme = "The SOUTH A1"
             break;
@@ -175,23 +175,8 @@ function whereIsThatBoi(){
         case 56:
             findme = "WOBBLY WHEEL Taunton, Honiton, Exeter & ✈ (M5) Okehampton (A30 West)"
             break;
-        case 57:
-            findme = "Grantham A52 Sleaford (A1121)"
-            break;
-        case 58:
-            findme = "Whittlesey (A605) Wisbeach (A47)"
-            break;
-        case 59:
-            findme = "Holbeach A151 King's Lynn (A17)"
-            break;
-        case 60:
-            findme = "Spalding A151"
-            break;
-        case 61:
-            findme = "Boston A16 Grantham (A52)"
-            break;
         default:
-            findme = "I am sorry, But I must be lost as this isn't working"
+            findme = "Lost"
             break;
             //If you can't tell from all of the above I really like driving!
     }
