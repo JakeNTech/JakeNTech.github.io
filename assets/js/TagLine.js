@@ -26,16 +26,16 @@ function hahahfunny(){
             newtext = "I can't spell"
             break;
         case 7:
-            newtext = "Yes I do computing...no I will not fix your printer"
+            newtext = "No I will not fix your printer"
             break;
         case 8:
-            newtext = "If you are still using Windows XP please stop"
+            newtext = "Forensicator"
             break;
         case 9:
             newtext = "I'm going to turn petrol into dust and noise."
             break;
         default:
-            newtext = "There should be a joke like line here! If it doesn't work I am sorry for any inconvenience."
+            newtext = "Hello!"
             break;
     }
     document.getElementById("tagline").innerHTML = newtext;

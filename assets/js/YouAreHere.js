@@ -26,7 +26,7 @@ function whereIsThatBoi(){
             findme = "52.087824, -0.343716"
             break;
         case 7:
-            findme = "Drinking either Tea or Beer"
+            findme = "London Aylesbury M40 Newbury Oxford A34"
             break;
         case 8:
             findme = "M25 (M40, M1), Watford (M3,M23) Gatwick ✈ Heathrow ✈ (Term 4,5 & Cargo)"
@@ -41,10 +41,10 @@ function whereIsThatBoi(){
             findme = "Town Center All main routes A16 (A52, A1121)"
             break;
         case 12:
-            findme = "Sleaford A17 then quick turn left Quadring Eaudike"
+            findme = "Sleaford A17 Quadring Eaudike"
             break;
         case 13:
-            findme = "Crowland"
+            findme = "Swindon Oxford A420"
             break;
         case 14:
             findme ="The NORTH(A1) Sleaford A15 Wisbeach(A47) Leicester(A47) Spalding(A16)"
@@ -104,7 +104,7 @@ function whereIsThatBoi(){
             findme = "London Reading M4 A308(M) Oxford A404(M)"
             break;
         case 33:
-            findme = "London M4"
+            findme = "Richmond A6055 (A6108) Brough Penrith A66"
             break;
         case 34:
             findme = "Carmarthen Caerfyrddin M4"
@@ -125,7 +125,7 @@ function whereIsThatBoi(){
             findme = "Saltash Liskeard Cornwall A38"
             break;
         case 40:
-            findme = "Hinckley A5"
+            findme = "The NORTH, Bedford, M.Keynes M1"
             break;
         case 41:
             findme = "Newmarket Cambridge A1303 Burwell (B1102)"
