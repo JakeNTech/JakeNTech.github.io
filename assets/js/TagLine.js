@@ -3,7 +3,7 @@ function getRndInteger(min, max) {
 }
 function hahahfunny(){
     var newtext = "";
-    switch (getRndInteger(0,9)) {
+    switch (getRndInteger(0,11)) {
         case 0:
             newtext = "Error 418: I am a teapot!"
             break;
@@ -20,7 +20,7 @@ function hahahfunny(){
             newtext = "Why do things the easy way when you can do it the long and bizzare way?!"
             break;
         case 5:
-            newtext = "Occasionally will do something mildly interesting"
+            newtext = "Computers are cool"
             break;
         case 6:
             newtext = "I can't spell"
@@ -32,7 +32,10 @@ function hahahfunny(){
             newtext = "Forensicator"
             break;
         case 9:
-            newtext = "I'm going to turn petrol into dust and noise."
+            newtext = "I'm going to turn petrol into dust and noise. - Richard Hammond"
+            break;
+        case 10:
+            newtext = "They said to write somthing intresting about yourself...I couldn't think of anything...so here we are"
             break;
         default:
             newtext = "Hello!"
