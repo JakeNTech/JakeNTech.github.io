@@ -2,5 +2,5 @@ User-agent: Googlebot-Image
 Disallow: / 
 
 User-agent: *
-Disallow: */TotallyProfessionalPartOfTheSite
+Disallow: */alternateindexpage
 Disallow: */Assets
