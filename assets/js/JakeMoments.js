@@ -53,5 +53,6 @@ function durr(){
             saying = "Is a single strand of spaghetti a 'spaghet'?"
             break;
     }
-    document.getElementById("sayings").innerHTML = saying;
+    document.getElementById("sayings").innerHTML = "<i>"+saying+"</i>";
 }
+durr();
