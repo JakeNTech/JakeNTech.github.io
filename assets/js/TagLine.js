@@ -23,7 +23,7 @@ function hahahfunny(){
             newtext = "Computers are cool"
             break;
         case 6:
-            newtext = "I can't spell"
+            newtext = "Professional bad speller"
             break;
         case 7:
             newtext = "No I will not fix your printer"
