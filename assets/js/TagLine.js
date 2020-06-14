@@ -29,7 +29,7 @@ function hahahfunny(){
             newtext = "No I will not fix your printer"
             break;
         case 8:
-            newtext = "Forensicator"
+            newtext = "Aspiring Forensicator"
             break;
         case 9:
             newtext = "I'm going to turn petrol into dust and noise. - Richard Hammond"

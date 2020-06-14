@@ -17,7 +17,7 @@ function whereIsThatBoi(){
             findme = "Cambridge Bedford A421"
             break;
         case 4:
-            findme = "London Luton airport what?!"
+            findme = "London Luton airport wait...what?!"
             break;
         case 5:
             findme = "Boston A16"
@@ -77,102 +77,99 @@ function whereIsThatBoi(){
             findme = "Whitby A169"
             break;
         case 24:
-            findme = "Humber Br Lincoln A15"
-            break;
-        case 25:
             findme = "Humber Br. (Toll) Lincoln A15"
             break;
-        case 26:
+        case 25:
             findme = "(M40, M4) Heathrow ✈ M25"
             break;
-        case 27:
+        case 26:
             findme = "A30 London (W) Hounslow Staines"
             break;
-        case 28:
+        case 27:
             findme = "(M25(S)) Bagshot Egham A30 Wraysbury B376"
             break;
-        case 29:
+        case 28:
             findme = "Winsor A308 Legoland"
             break;
-        case 30:
+        case 29:
             findme = "Ascot Bracknell B3022 (A332) (M3) (M4) Alternative Route"
             break;
-        case 31:
+        case 30:
             findme = "Fifield Winkfield B3022"
             break;
-        case 32:
+        case 31:
             findme = "London Reading M4 A308(M) Oxford A404(M)"
             break;
-        case 33:
+        case 32:
             findme = "Richmond A6055 (A6108) Brough Penrith A66"
             break;
-        case 34:
+        case 33:
             findme = "Carmarthen Caerfyrddin M4"
             break;
-        case 35:
+        case 34:
             findme = "A380 Torquay Plymouth A38"
             break;
-        case 36:
+        case 35:
             findme = "A1139 Peterbourough,Wisbeach (A47) A605 N'hampton, Oundle"
             break;
-        case 37:
+        case 36:
             findme = "A1 London (N&C) A1(M) Hatfeild A1081 Barnet Services"
             break;
-        case 38:
+        case 37:
             findme = "Liskeard A38 Saltash (B3271)"
             break;
-        case 39:
+        case 38:
             findme = "Saltash Liskeard Cornwall A38"
             break;
-        case 40:
+        case 39:
             findme = "The NORTH, Bedford, M.Keynes M1"
             break;
-        case 41:
+        case 40:
             findme = "Newmarket Cambridge A1303 Burwell (B1102)"
             break;
-        case 42:
+        case 41:
             findme = "Grantham Gt. Gonerby Downtown B1174 Allington"
             break;
-        case 43:
+        case 42:
             findme = "The SOUTH Stamford A1"
             break;
-        case 44:
+        case 43:
             findme = "The NORTH (A1) Wetherby M1 York (A64)"
             break;
-        case 45:
+        case 44:
             findme = "The NORTH Wetherby A1(M) Manchester Leeds (M62)"
             break;
-        case 46:
+        case 45:
             findme = "Diss A143 Bury St Ed's A1302"
             break;
-        case 47:
+        case 46:
             findme = "Thetford A134 Diss (A143) Gt. Barton Sugar Factory"
             break;
-        case 48:
+        case 47:
             findme = "Southampton Bournemouth Portsmouth M3"
             break;
-        case 49:
+        case 48:
             findme = "M27 WEST So'ton Docks Bournemouth"
             break;
-        case 50:
+        case 49:
             findme = "(A5)(A4146) Aylesbury Dunstable Bletchly Park Stadium MK";
             break;
-        case 51:
+        case 50:
             findme = "Warwick A429";
             break;
-        case 52:
+        case 51:
             findme = "Lowerstoft (A47)"
             break;
-        case 53:
+        case 52:
             findme = "Gt. Yarmouth A47 Norwich A47"
             break;
-        case 54:
+        case 53:
             findme = "Sleaford Woodhall Spa (B1192) Tattershall Billinghay"
             break;
-        case 55:
+        case 54:
             findme = "M45 Coventry (S)"
             break;
-        case 56:
+        case 55:
             findme = "WOBBLY WHEEL Taunton, Honiton, Exeter & ✈ (M5) Okehampton (A30 West)"
             break;
         default:
