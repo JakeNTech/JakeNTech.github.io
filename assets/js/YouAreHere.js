@@ -3,7 +3,7 @@ function getRndInteger(min, max) {
 }
 function whereIsThatBoi(){
     var findme ="";
-    switch (getRndInteger(0,56)) {
+    switch (getRndInteger(0,33)) {
         case 0:
             findme = "The SOUTH A1"
             break;
@@ -15,9 +15,6 @@ function whereIsThatBoi(){
             break;
         case 3:
             findme = "Cambridge Bedford A421"
-            break;
-        case 4:
-            findme = "London Luton airport wait...what?!"
             break;
         case 5:
             findme = "Boston A16"
@@ -32,150 +29,86 @@ function whereIsThatBoi(){
             findme = "M25 (M40, M1), Watford (M3,M23) Gatwick ✈ Heathrow ✈ (Term 4,5 & Cargo)"
             break;
         case 9:
-            findme = "London M4(E)"
-            break;
-        case 10:
-            findme = "Sleaford A1121 (A17)"
-            break;
-        case 11:
             findme = "Town Center All main routes A16 (A52, A1121)"
             break;
-        case 12:
+        case 10:
             findme = "Sleaford A17 Quadring Eaudike"
             break;
-        case 13:
+        case 11:
             findme = "Swindon Oxford A420"
             break;
-        case 14:
+        case 12:
             findme ="The NORTH(A1) Sleaford A15 Wisbeach(A47) Leicester(A47) Spalding(A16)"
             break;
-        case 15:
-            findme = "Peterbourough(A15) Wisbeach (A47) Eastern Industry"
-            break;
-        case 16:
+        case 13:
             findme = "Perry Grafham B661 Kimbolton(B645)"
             break;
-        case 17:
+        case 14:
             findme = "Scotch Corner Richmond A6055 (A6108) Brough Penrith A66"
             break;
-        case 18:
-            findme = "Carlisle M6(N) Preston Kendal M6(S)"
-            break;
-        case 19:
+        case 15:
             findme = "Ullswater Staintion A592"
             break;
-        case 20:
+        case 16:
             findme = "Blandford A350"
             break;
-        case 21:
-            findme = "Newbury Basingstoke A303 (M3)"
-            break;
-        case 22:
-            findme = "Aylesbury, Bicester A41"
-            break;
-        case 23:
-            findme = "Whitby A169"
-            break;
-        case 24:
-            findme = "Humber Br. (Toll) Lincoln A15"
-            break;
-        case 25:
+        case 17:
             findme = "(M40, M4) Heathrow ✈ M25"
             break;
-        case 26:
+        case 18:
             findme = "A30 London (W) Hounslow Staines"
             break;
-        case 27:
+        case 19:
             findme = "(M25(S)) Bagshot Egham A30 Wraysbury B376"
             break;
-        case 28:
-            findme = "Winsor A308 Legoland"
-            break;
-        case 29:
+        case 20:
             findme = "Ascot Bracknell B3022 (A332) (M3) (M4) Alternative Route"
             break;
-        case 30:
-            findme = "Fifield Winkfield B3022"
-            break;
-        case 31:
+        case 21:
             findme = "London Reading M4 A308(M) Oxford A404(M)"
             break;
-        case 32:
+        case 22:
             findme = "Richmond A6055 (A6108) Brough Penrith A66"
             break;
-        case 33:
+        case 23:
             findme = "Carmarthen Caerfyrddin M4"
             break;
-        case 34:
+        case 24:
             findme = "A380 Torquay Plymouth A38"
             break;
-        case 35:
+        case 25:
             findme = "A1139 Peterbourough,Wisbeach (A47) A605 N'hampton, Oundle"
             break;
-        case 36:
+        case 26:
             findme = "A1 London (N&C) A1(M) Hatfeild A1081 Barnet Services"
             break;
-        case 37:
-            findme = "Liskeard A38 Saltash (B3271)"
-            break;
-        case 38:
-            findme = "Saltash Liskeard Cornwall A38"
-            break;
-        case 39:
+        case 27:
             findme = "The NORTH, Bedford, M.Keynes M1"
             break;
-        case 40:
-            findme = "Newmarket Cambridge A1303 Burwell (B1102)"
-            break;
-        case 41:
+        case 28:
             findme = "Grantham Gt. Gonerby Downtown B1174 Allington"
             break;
-        case 42:
+        case 29:
             findme = "The SOUTH Stamford A1"
             break;
-        case 43:
-            findme = "The NORTH (A1) Wetherby M1 York (A64)"
-            break;
-        case 44:
-            findme = "The NORTH Wetherby A1(M) Manchester Leeds (M62)"
-            break;
-        case 45:
-            findme = "Diss A143 Bury St Ed's A1302"
-            break;
-        case 46:
+        case 30:
             findme = "Thetford A134 Diss (A143) Gt. Barton Sugar Factory"
             break;
-        case 47:
+        case 31:
             findme = "Southampton Bournemouth Portsmouth M3"
             break;
-        case 48:
+        case 31:
             findme = "M27 WEST So'ton Docks Bournemouth"
             break;
-        case 49:
-            findme = "(A5)(A4146) Aylesbury Dunstable Bletchly Park Stadium MK";
+        case 32:
+            findme = "(A5)(A4146) Aylesbury Dunstable Bletchly Park Stadium MK"
             break;
-        case 50:
-            findme = "Warwick A429";
-            break;
-        case 51:
-            findme = "Lowerstoft (A47)"
-            break;
-        case 52:
-            findme = "Gt. Yarmouth A47 Norwich A47"
-            break;
-        case 53:
+        case 33:
             findme = "Sleaford Woodhall Spa (B1192) Tattershall Billinghay"
-            break;
-        case 54:
-            findme = "M45 Coventry (S)"
-            break;
-        case 55:
-            findme = "WOBBLY WHEEL Taunton, Honiton, Exeter & ✈ (M5) Okehampton (A30 West)"
             break;
         default:
             findme = "Lost"
             break;
-            //If you can't tell from all of the above I really like driving!
     }
     document.getElementById("top_secret_location").innerHTML = findme;
 }
