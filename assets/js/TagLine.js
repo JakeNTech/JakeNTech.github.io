@@ -32,7 +32,7 @@ function hahahfunny(){
             newtext = `I'm going to turn petrol into dust and noise. - Richard Hammond`
             break;
         case 10:
-            newtext = `They said to write somthing intresting about yourself...I couldn't think of anything...so here we are`4
+            newtext = `They said to write somthing intresting about yourself...I couldn't think of anything...so here we are`
             break;
         default:
             newtext = `Hello!`
