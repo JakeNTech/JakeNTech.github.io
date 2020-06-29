@@ -3,9 +3,9 @@ function getRndInteger(min, max) {
 }
 function hahahfunny(){
     newtext = "";
-    switch (getRndInteger(0,10)) {
+    switch (getRndInteger(0,6)) {
         case 0:
-            newtext = `Harry Potter Fan`
+            newtext = `They said to write somthing intresting about yourself...I couldn't think of anything...so here we are`
             break;
         case 1:
             newtext = `<i>"Have you tried turning it off and on again?"</i>`
@@ -20,19 +20,10 @@ function hahahfunny(){
             newtext = `Why do things the easy way when you can do it the long and bizzare way?!`
             break;
         case 5:
-            newtext = `Computers are cool`
-            break;
-        case 6:
             newtext = `Professional bad speller`
             break;
-        case 8:
+        case 6:
             newtext = `Aspiring Forensicator`
-            break;
-        case 9:
-            newtext = `I'm going to turn petrol into dust and noise. - Richard Hammond`
-            break;
-        case 10:
-            newtext = `They said to write somthing intresting about yourself...I couldn't think of anything...so here we are`
             break;
         default:
             newtext = `Hello!`
