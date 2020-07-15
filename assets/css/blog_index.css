@@ -31,9 +31,9 @@ body{
   text-align: center;
 }
 .card:hover{
-  box-shadow: 0 0 10px rgba(220, 66, 244, 1);
+  box-shadow: 0 0 15px #e5559b;
 }
-#date_author{
+#date{
   font-style: italic;
   color: #909692;
 }

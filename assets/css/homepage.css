@@ -3,7 +3,7 @@
 	height: device-height;
 }
 body{
-	background-image: url("/assets/backgrounds/BournemouthHDD.jpg");
+	background-image: url("/assets/backgrounds/London_Shard.jpg");
 	font-family: 'Rubik', sans-serif;
 	color:white;
 	background-size: cover;
@@ -18,7 +18,7 @@ body{
 }
 #icon{
 	width:auto;
-	height:20%;
+	height:15%;
 }
 .locate_me{
 	display: flex;
@@ -31,5 +31,5 @@ body{
 	height: 5%;
 }
 #title{
-	color: #f77db6;
+	color: #000000;
 }

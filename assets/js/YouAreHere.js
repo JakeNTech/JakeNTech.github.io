@@ -1,7 +1,7 @@
 function getRndInteger(min, max) {
   return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
-function whereIsThatBoi(){
+function whereAmI(){
     var findme ="";
     switch (getRndInteger(0,33)) {
         case 0:
@@ -112,4 +112,4 @@ function whereIsThatBoi(){
     }
     document.getElementById("top_secret_location").innerHTML = findme;
 }
-whereIsThatBoi()
+whereAmI()
