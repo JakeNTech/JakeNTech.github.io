@@ -3,7 +3,7 @@ function getRndInteger(min, max) {
 }
 function whereAmI(){
     var findme ="";
-    switch (getRndInteger(0,33)) {
+    switch (getRndInteger(0,29)) {
         case 0:
             findme = "The SOUTH A1"
             break;
@@ -14,96 +14,84 @@ function whereAmI(){
             findme = "London (City & West) A1(M)"
             break;
         case 3:
-            findme = "Cambridge Bedford A421"
-            break;
-        case 5:
-            findme = "Boston A16"
-            break;
-        case 6:
-            findme = "52.087824, -0.343716"
-            break;
-        case 7:
             findme = "London Aylesbury M40 Newbury Oxford A34"
             break;
-        case 8:
+        case 4:
             findme = "M25 (M40, M1), Watford (M3,M23) Gatwick ✈ Heathrow ✈ (Term 4,5 & Cargo)"
             break;
-        case 9:
+        case 5:
             findme = "Town Center All main routes A16 (A52, A1121)"
             break;
-        case 10:
+        case 6:
             findme = "Sleaford A17 Quadring Eaudike"
             break;
-        case 11:
+        case 7:
             findme = "Swindon Oxford A420"
             break;
-        case 12:
+        case 8:
             findme ="The NORTH(A1) Sleaford A15 Wisbeach(A47) Leicester(A47) Spalding(A16)"
             break;
-        case 13:
+        case 9:
             findme = "Perry Grafham B661 Kimbolton(B645)"
             break;
-        case 14:
+        case 10:
             findme = "Scotch Corner Richmond A6055 (A6108) Brough Penrith A66"
             break;
-        case 15:
+        case 11:
             findme = "Ullswater Staintion A592"
             break;
-        case 16:
+        case 12:
             findme = "Blandford A350"
             break;
-        case 17:
+        case 13:
             findme = "(M40, M4) Heathrow ✈ M25"
             break;
-        case 18:
+        case 14:
             findme = "A30 London (W) Hounslow Staines"
             break;
-        case 19:
+        case 15:
             findme = "(M25(S)) Bagshot Egham A30 Wraysbury B376"
             break;
-        case 20:
+        case 16:
             findme = "Ascot Bracknell B3022 (A332) (M3) (M4) Alternative Route"
             break;
-        case 21:
+        case 17:
             findme = "London Reading M4 A308(M) Oxford A404(M)"
             break;
-        case 22:
+        case 18:
             findme = "Richmond A6055 (A6108) Brough Penrith A66"
             break;
-        case 23:
+        case 19:
             findme = "Carmarthen Caerfyrddin M4"
             break;
-        case 24:
+        case 20:
             findme = "A380 Torquay Plymouth A38"
             break;
-        case 25:
+        case 21:
             findme = "A1139 Peterbourough,Wisbeach (A47) A605 N'hampton, Oundle"
             break;
-        case 26:
+        case 22:
             findme = "A1 London (N&C) A1(M) Hatfeild A1081 Barnet Services"
             break;
-        case 27:
+        case 23:
             findme = "The NORTH, Bedford, M.Keynes M1"
             break;
-        case 28:
+        case 24:
             findme = "Grantham Gt. Gonerby Downtown B1174 Allington"
             break;
-        case 29:
+        case 25:
             findme = "The SOUTH Stamford A1"
             break;
-        case 30:
+        case 26:
             findme = "Thetford A134 Diss (A143) Gt. Barton Sugar Factory"
             break;
-        case 31:
+        case 27:
             findme = "Southampton Bournemouth Portsmouth M3"
             break;
-        case 31:
+        case 28:
             findme = "M27 WEST So'ton Docks Bournemouth"
             break;
-        case 32:
-            findme = "(A5)(A4146) Aylesbury Dunstable Bletchly Park Stadium MK"
-            break;
-        case 33:
+        case 29:
             findme = "Sleaford Woodhall Spa (B1192) Tattershall Billinghay"
             break;
         default:
