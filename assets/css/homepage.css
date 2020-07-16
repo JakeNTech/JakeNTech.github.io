@@ -3,7 +3,7 @@
 	height: device-height;
 }
 body{
-	background-image: url("/assets/backgrounds/London_Shard.jpg");
+	background-image: url("/assets/backgrounds/beach.jpg");
 	font-family: 'Rubik', sans-serif;
 	color:white;
 	background-size: cover;
@@ -31,5 +31,5 @@ body{
 	height: 5%;
 }
 #title{
-	color: #000000;
+	color: #E3008C;
 }
