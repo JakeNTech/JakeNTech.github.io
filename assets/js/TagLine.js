@@ -1,25 +1,22 @@
-function getRndInteger(min, max) {
+function randomInteger(min, max) {
   return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
-function hahahfunny(){
+function TagLine(){
     newtext = "";
-    switch (getRndInteger(0,5)) {
+    switch (randomInteger(0,4)) {
         case 0:
             newtext = `They said to write somthing intresting about yourself...I couldn't think of anything...so here we are`
             break;
         case 1:
-            newtext = `<i>"Have you tried turning it off and on again?"</i>`
+            newtext = `Owner of low milage duck...one less carful owner`
             break;
         case 2:
-            newtext = `"Are you the guy with the duck?" Yes!`
+            newtext = `"<i>Jake Bullet, Cybernautic Detective. I like that!</i>" - Kryten, Red Dwarf`
             break;
         case 3:
-            newtext = `Why do things the easy way when you can do it the long and bizzare way?!`
-            break;
-        case 4:
             newtext = `Professional bad speller`
             break;
-        case 5:
+        case 4:
             newtext = `Aspiring Forensicator`
             break;
         default:
@@ -28,4 +25,4 @@ function hahahfunny(){
     }
     document.getElementById("tagline").innerHTML = newtext;
 }
-hahahfunny()
+TagLine()
