@@ -3,7 +3,7 @@
 	height: device-height;
 }
 body{
-	background-image: url("/assets/backgrounds/beach.jpg");
+	background-image: url("/assets/img/backgrounds/beach.jpg");
 	font-family: 'Rubik', sans-serif;
 	color:white;
 	background-size: cover;
