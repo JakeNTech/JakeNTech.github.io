@@ -8,4 +8,4 @@ Disallow: /
 
 User-agent: *
 Disallow: */alternateindexpage
-Disallow: */Assets
+Disallow: */assets
