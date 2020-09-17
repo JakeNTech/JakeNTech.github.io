@@ -3,20 +3,17 @@ function randomInteger(min, max) {
 }
 function TagLine(){
     newtext = "";
-    switch (randomInteger(0,4)) {
+    switch (randomInteger(0,3)) {
         case 0:
-            newtext = `They said to write somthing intresting about yourself...I couldn't think of anything...so here we are`
+            newtext = `Owner of low milage duck`
             break;
         case 1:
-            newtext = `Owner of low milage duck...one less carful owner`
-            break;
-        case 2:
             newtext = `"<i>Jake Bullet, Cybernautic Detective. I like that!</i>" - Kryten, Red Dwarf`
             break;
-        case 3:
+        case 2:
             newtext = `Professional bad speller`
             break;
-        case 4:
+        case 3:
             newtext = `Aspiring Forensicator`
             break;
         default:

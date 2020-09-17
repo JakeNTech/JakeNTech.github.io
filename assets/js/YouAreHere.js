@@ -29,7 +29,7 @@ function TopSecretLocationFinder(){
             findme = "A1 London (N&C) A1(M) Hatfeild A1081 Barnet Services"
             break;
         case 8:
-            findme = "The NORTH, Bedford, M.Keynes M1"
+            findme = "The NORTH, Bedford, Milton Keynes M1"
             break;
         case 9:
             findme = "Grantham Gt. Gonerby Downtown B1174 Allington"
