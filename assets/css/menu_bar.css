@@ -15,7 +15,7 @@
   }
   /* Change color on hover */
   .navigation_bar a:hover {
-    background-color: #E3008C;
+    background-color: #ea7700;
     color: white;
   }
   #active{

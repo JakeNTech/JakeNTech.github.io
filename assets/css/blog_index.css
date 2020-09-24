@@ -31,7 +31,7 @@ body{
   text-align: center;
 }
 .card:hover{
-  box-shadow: 0 0 15px #e5559b;
+  box-shadow: 0 0 15px #ea7700;
 }
 #date{
   font-style: italic;
