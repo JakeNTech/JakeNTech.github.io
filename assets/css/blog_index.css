@@ -11,8 +11,7 @@ body{
   padding: 15px;
   font-size: 20px;
   text-align: center;
-  background: grey;
-  color: white;
+  color: black;
 }
 .card{
   position: relative;
@@ -31,7 +30,7 @@ body{
   text-align: center;
 }
 .card:hover{
-  box-shadow: 0 0 15px #ea7700;
+  box-shadow: 0 0 15px #e5559b;
 }
 #date{
   font-style: italic;
