@@ -3,24 +3,44 @@
 	height: device-height;
 }
 body{
-	font-family: 'Rubik', sans-serif;
+	font-family: 'Open Sans', sans-serif;
+	background-color: #ffffff;
 	color:white;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
 }
 .header{
 	text-align: center;
-	padding:1%;
+	padding:0.1%;
 }
 .post{
 	background-color: rgb(0,0,0,0.8);
 }
 .content{
-  margin:2%;
-  text-align: center;
+  margin-left: 4%;
+  margin-right: 4%;
+  margin-bottom: 2%;
   padding-bottom:1%;
+  overflow: hidden;
 }
-#quote{
-  font-style:italic;
-  color:white;
+#link{
+	color:#e5559b;
+	font-style: italic;
+}
+#link:hover{
+	color:#34b1eb;
+}
+#small_image{
+	height: 70%;
+	position: relative;
+	object-fit: contain;
+}
+#card {
+	padding: 1%;
+	float: right;
+	text-align: center;
+	max-width: 99%;
+	color: white;
+}
+#card_container {
+	padding: 2px 16px;
+	background-color: #e5559b;
+}

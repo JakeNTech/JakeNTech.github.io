@@ -3,20 +3,15 @@
 	height: device-height;
 }
 body{
-	background-image: url("/assets/img/backgrounds/beach_2.jpg");
-	font-family: 'Rubik', sans-serif;
-	color:white;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
+	font-family: 'Open Sans', sans-serif;
+	background-color: #ffffff;
 }
 .center_box {
-	position: relative;
  	margin: auto;
 	padding: 5%;	
 	text-align:center;
 }
-#icon{
+#smaller_icon{
 	width:auto;
 	height:15%;
 }

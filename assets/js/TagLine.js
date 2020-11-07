@@ -14,7 +14,7 @@ function TagLine(){
             newtext = `Professional bad speller`
             break;
         case 3:
-            newtext = `Aspiring Forensicator`
+            newtext = `Not particularly intresting`
             break;
         default:
             newtext = `Hello!`
