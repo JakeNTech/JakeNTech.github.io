@@ -36,9 +36,6 @@ body{
 #card {
 	padding: 1%;
 	float: right;
-	text-align: center;
-	max-width: 99%;
-	color: white;
 }
 #card_container {
 	padding: 2px 16px;

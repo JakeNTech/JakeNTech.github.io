@@ -10,10 +10,12 @@ body{
  	margin: auto;
 	padding: 5%;	
 	text-align:center;
+	padding-bottom: 0%;
 }
 #smaller_icon{
 	width:auto;
 	height:15%;
+	max-height: 105px;
 }
 .locate_me{
 	display: flex;
@@ -24,6 +26,7 @@ body{
 	padding:2%;
 	width:auto;
 	height: 5%;
+	max-height: 45px;
 }
 #title{
 	color: #e5559b;
