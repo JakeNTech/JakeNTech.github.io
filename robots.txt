@@ -9,3 +9,4 @@ Disallow: /
 User-agent: *
 Disallow: */alternateindexpage
 Disallow: */assets
+Disallow: /wordpress_server1_walkthough.html
