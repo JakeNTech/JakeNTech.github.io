@@ -1,6 +1,27 @@
 function randomInteger(min, max) {
   return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
+function TagLine(){
+    var newtext = "";
+    switch (randomInteger(0,3)) {
+        case 0:
+            newtext = `Owner of low milage duck`
+            break;
+        case 1:
+            newtext = `"<i>Jake Bullet, Cybernautic Detective. I like that!</i>" - Kryten, Red Dwarf`
+            break;
+        case 2:
+            newtext = `Professional bad speller`
+            break;
+        case 3:
+            newtext = `Not particularly intresting`
+            break;
+        default:
+            newtext = `Hello!`
+            break;
+    }
+    document.getElementById("tagline").innerHTML = newtext;
+}
 function TopSecretLocationFinder(){
     var findme ="";
     switch (randomInteger(0,12)) {
@@ -11,7 +32,7 @@ function TopSecretLocationFinder(){
             findme = "London (City & West) A1(M)"
             break;
         case 2:
-            findme = "M25 (M40, M1), Watford (M3,M23) Gatwick ✈ Heathrow ✈ (Term 4,5 & Cargo)"
+            findme = "M25 (M40, M1), Watford (M3,M23) Gatwick Heathrow (Term 4,5 & Cargo)"
             break;
         case 3:
             findme = "Perry Grafham B661 Kimbolton(B645)"
@@ -50,3 +71,4 @@ function TopSecretLocationFinder(){
     document.getElementById("top_secret_location").innerHTML = findme;
 }
 TopSecretLocationFinder()
+TagLine()
