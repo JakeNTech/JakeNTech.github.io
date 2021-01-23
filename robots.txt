@@ -10,3 +10,4 @@ User-agent: *
 Disallow: */alternateindexpage
 Disallow: */assets
 Disallow: /write_ups
+Disallow: /blog/posts
