@@ -49,3 +49,10 @@ body{
 	position: relative;
     object-fit: contain;
 }
+#link{
+	color:#e5559b;
+	font-style: italic;
+}
+#link:hover{
+	color:#34b1eb;
+}
