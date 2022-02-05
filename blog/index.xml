@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on JakeNTech</title>
+    <link>http://jakentech.com/blog/</link>
+    <description>Recent content in Blog on JakeNTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Fri, 04 Feb 2022 17:39:10 +0000</lastBuildDate>
+    
+	<atom:link href="http://jakentech.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>CyberStart Elite 2019</title>
+      <link>http://jakentech.com/blog/cyberstartelite2019/</link>
+      <pubDate>Sat, 31 Aug 2019 11:03:42 +0000</pubDate>
+      
+      <guid>http://jakentech.com/blog/cyberstartelite2019/</guid>
+      <description>At the start of the second year of Cyber Discovery, I was invited to carry on with the program, for what I thought was going to be my last year due to my age. The first year was simply amazing with so many interesting, and frustrating, challenges. Somehow, I even managed to make it to CyberStart Elite in the first year (I still do not know how!).
+When CyberStart Game began, I saw that a new base had been added, a forensic one; I began work on this straight away, in the library while at sixth-form on an A1342.</description>
+    </item>
+    
+    <item>
+      <title>Self-Driving Duck</title>
+      <link>http://jakentech.com/blog/alevel-duck/</link>
+      <pubDate>Mon, 29 Jul 2019 15:40:55 +0000</pubDate>
+      
+      <guid>http://jakentech.com/blog/alevel-duck/</guid>
+      <description>Part of the OCR Computer Science A2 is a programming project, which made up a small percentage of the final grade. Our group had a bit of a thing about ducks, I think it’s a deep regret of the teachers telling us about rubber duck decoding and handing us small squeaky ducks. As the start of the project loomed, we had to start brainstorming ideas, my initial idea was a speed limit sign detection AI.</description>
+    </item>
+    
+  </channel>
+</rss>
