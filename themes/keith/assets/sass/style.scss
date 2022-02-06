@@ -35,9 +35,9 @@ h1 a, h2 a{
 }
 p{
 	color: $text-colour;
-	img{
-		max-width: 100%;
-	}
+}
+img{
+	max-width: 100%;
 }
 // HTML area specific
 header{
@@ -80,13 +80,13 @@ header{
 		margin: 3rem 0;
 		color: $pink-colour;
 	}
-	img{
-		width:auto;
-		height:15%;
-		max-height: 105px;
-		margin: 3rem 0;
-		margin-bottom: 0.5rem;
-	}
+}
+#POV{
+	width:auto;
+	height:15%;
+	max-height: 105px;
+	margin: 3rem 0;
+	margin-bottom: 0.5rem;
 }
 //Footer
 footer{

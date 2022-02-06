@@ -44,4 +44,4 @@ The duck was certainly a fun project that gave me, and probably others, a fair w
 
 The finished product, stood proud on the desk moments before falling off:
 
-![](/assets/img/blog_images/Ducko.jpg)
+![Image of the Ducko](/assets/img/blog_images/Ducko.jpg)
