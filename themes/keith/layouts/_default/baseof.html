@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+        <base href="{{ .Site.BaseURL }}">
+        <title>{{ block "title" .}}{{ .Title}}{{end}}</title>
+        <link rel="shortcut icon" href="/assets/img/favicon.png"/>
+        {{ $style := resources.Get "sass/style.scss" | resources.ToCSS | resources.Minify }}
+        <link rel="stylesheet" href="{{ $style.Permalink }}">
+        {{/*  For Social media icons  */}}
+    </head>
+    <body>
+        {{- partial "header.html" . -}}
+        <div id="content">
+            {{- block "main" . }}{{- end }}
+        </div>
+        {{- partial "footer.html" . -}}
+    </body>
+</html>

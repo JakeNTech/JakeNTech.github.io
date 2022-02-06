@@ -1,0 +1,11 @@
+baseURL = "https://jakentech.com"
+languageCode = "en-gb"
+title = "JakeNTech"
+theme = "keith"
+# Enable robots.txt
+enableRobotsTXT = true
+# Disable Categories and Tags
+disableKinds = ["taxonomy", "term"]
+[taxonomies]
+    category = "categories"
+    tag = "tags"

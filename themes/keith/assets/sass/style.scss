@@ -1,0 +1,125 @@
+$pink-colour: #e5559b;
+$text-colour: #000;
+$background-colour: #fff;
+
+// Generic Styles
+html{
+	font-size: 50%;
+}
+body{
+	color: $text-colour;
+	background-color: $background-colour;
+	font: 2rem/1 Verdana, Arial, sans-serif;
+	margin: 20px auto;
+	padding: 0 10px;
+	max-width: 800px;
+}
+@media (max-width: 800px) {
+	body {
+	  margin: 10px 0;
+	}
+}
+h1{
+	color: $pink-colour;
+	font-weight: normal;
+	font-size: 4rem;
+	text-align: center;
+}
+h2{
+	font-weight: normal;
+	font-size: 3rem;
+}
+h1 a, h2 a{
+	color: $pink-colour;
+	text-decoration: none;
+}
+// HTML area specific
+header{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	h1{
+		font-weight: normal;
+		font-size: 3rem;
+		margin: 0;
+		padding: 0;
+	}
+	nav{
+		margin-left: auto;
+	}
+	ul{
+		list-style-type: none;
+		margin: 0%;
+		padding: 0%;
+		li{
+			display: inline-block;
+			font-size: 2rem;
+			padding:0 10px;
+			margin-right: 1rem;
+			&:last-child{
+				margin-right: 0;
+			}
+			a{
+			color: $text-colour;
+			text-decoration: none;
+			}
+		}
+	}
+}
+// Icon
+#POV{
+	width:auto;
+	height:15%;
+	max-height: 105px;
+	margin: 3rem 0;
+	margin-bottom: 0.5rem;
+}
+//Main_Index
+.intro_points{
+	text-align: center;
+	h2{
+		text-align: center;
+		margin: 3rem 0;
+		color: $pink-colour;
+	}
+}
+//Footer
+footer{
+	margin-top: 3rem;
+	text-align: center;
+	ul{
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+		li{
+			display: inline-block;
+			padding: 0 20px;
+			a{
+				color: $pink-colour;
+			}
+		}
+	}
+}
+// Blog_Post CSS
+.blog_header{
+	text-align: center;
+	h2{
+		color: $pink-colour;
+	}
+	h4{
+		font-style: italic;
+		font-weight: normal;
+	}
+}
+.blog_footer{
+	text-align: center;
+}
+// Blog_Listing_CSS	
+// #blog_select{
+//     border:1px solid #000;
+// 	margin-bottom: 10%;
+// 	text-decoration: none;
+// 	&:last-child{
+// 		margin-bottom: 0%;
+// 	}
+// }
