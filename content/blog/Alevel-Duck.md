@@ -15,11 +15,9 @@ Before we started the project, we had to have a meeting about it with the teache
 
 On the walk home, eBay was naturally what I was focusing on. A Remote-Control Toy Duck was presented to me. £10.99 later and the duck was mine! It had features such as RGB lighting, music and it would even quack!
 
-Ducko image
-
 The day it arrived I tore it down to make room for all the new hardware:
 <ul>
-    <li>Raspberry Pi 2b</li>
+    <li>Raspberry Pi 2B</li>
     <li>Raspberry Pi Camera</li>
     <li>USB TP-Link Wi-Fi Adapter</li>
     <li>Kodak 9V D Battery</li>
@@ -43,3 +41,7 @@ A better battery setup would have been wise, but enough trips to Poundland and I
 
 The next item on the agenda I needed to tackle was the documentation, which was a headache, I also think I have used all the printer toner and paper there is trying to print the final article out, there were far too many pages (Around 200 I recall). It got out of hand!
 The duck was certainly a fun project that gave me, and probably others, a fair wedge of entertainment for a couple of months, no matter how injured I became due to not paying attention when using a soldering iron or a coping saw. Having completed the project with the duck I turned it into a VPN server and an HTPC. I do want to re-do this one day with a new duck case and a newer Pi. 
+
+The finished product, stood proud on the desk moments before falling off:
+
+![](/assets/img/blog_images/Ducko.jpg)

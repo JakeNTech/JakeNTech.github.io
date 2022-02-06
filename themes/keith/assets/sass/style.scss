@@ -9,7 +9,7 @@ html{
 body{
 	color: $text-colour;
 	background-color: $background-colour;
-	font: 2rem/1 Verdana, Arial, sans-serif;
+	font: 2rem Tahoma, sans-serif;
 	margin: 20px auto;
 	padding: 0 10px;
 	max-width: 800px;
@@ -32,6 +32,12 @@ h2{
 h1 a, h2 a{
 	color: $pink-colour;
 	text-decoration: none;
+}
+p{
+	color: $text-colour;
+	img{
+		max-width: 100%;
+	}
 }
 // HTML area specific
 header{
@@ -66,14 +72,6 @@ header{
 		}
 	}
 }
-// Icon
-#POV{
-	width:auto;
-	height:15%;
-	max-height: 105px;
-	margin: 3rem 0;
-	margin-bottom: 0.5rem;
-}
 //Main_Index
 .intro_points{
 	text-align: center;
@@ -81,6 +79,13 @@ header{
 		text-align: center;
 		margin: 3rem 0;
 		color: $pink-colour;
+	}
+	img{
+		width:auto;
+		height:15%;
+		max-height: 105px;
+		margin: 3rem 0;
+		margin-bottom: 0.5rem;
 	}
 }
 //Footer

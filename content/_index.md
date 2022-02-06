@@ -4,7 +4,7 @@ menu: "main"
 draft: "false"
 ---
 <div class="intro_points">
-    <img src="/assets/img/255_8bit.png" id="POV">
+    <img src="/assets/img/255_8bit.png">
     <h2>Jake Nenadic</h2>
     <p>DFIR, Computer nerd and Petrol head</p>
     <p>CyberStart Elite '18 '19 '20</p>
