@@ -3,6 +3,7 @@ title: "CyberStart Elite 2019"
 date: 2019-08-31T11:03:42
 draft: false
 description: "A vist to SkyGarden, a week in the capital and a SANS FOR500 course!"
+artwork: "/assets/img/blog_images/CyberStart_Elite/Cybering_in_cyberspace.png"
 ---
 At the start of the second year of Cyber Discovery, I was invited to carry on with the program, for what I thought was going to be my last year due to my age. The first year was simply amazing with so many interesting, and frustrating, challenges. Somehow, I even managed to make it to CyberStart Elite in the first year (I still do not know how!). 
 
@@ -26,4 +27,4 @@ Another truly amazing part of the course was that we were all given a Forensic C
 
 This week was invaluable for what I want to do going forward. Not only was this week great for this course, but it was also amazing to meet the others who had made it there. I plan on trying to do some more research into the area and play around with old drives to see what I can pull. 
 
-Thanks to all those involved; But I suppose I better start getting ready to take the GCFE exam before moving to university.  [If you are interested in trying out CyberDiscovery or just want to find out more, the link to the site can be found here!](https://joincyberdiscovery.com/)
+Thanks to all those involved; But I suppose I better start getting ready to take the GCFE exam before moving to university. [If you are interested in trying out CyberDiscovery or just want to find out more, the link to the site can be found here!](https://joincyberdiscovery.com/)

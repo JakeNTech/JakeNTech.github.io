@@ -1,7 +1,9 @@
 ---
-title: "Homepage"
+title: "JakeNTech"
 menu: "main"
 draft: "false"
+description: "DUCKS!"
+artwork: "assets/img/writing.png"
 ---
 <div class="intro_points">
     <img src="/assets/img/255_8bit.png" id="POV">

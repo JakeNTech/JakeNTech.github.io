@@ -8,7 +8,18 @@
         <link rel="shortcut icon" href="/assets/img/favicon.png"/>
         {{ $style := resources.Get "sass/style.scss" | resources.ToCSS | resources.Minify }}
         <link rel="stylesheet" href="{{ $style.Permalink }}">
-        {{/*  For Social media icons  */}}
+        {{/*  META STUFF  */}}
+        <meta content="website" property="og:type">
+        <meta content="{{.Permalink}}" property="og:url">
+        <meta content="{{ .Site.BaseURL }}{{.Params.artwork}}" property="og:image">
+        <meta content="JakeNTech" property="og:site_name">
+        <meta content="{{.Description}}" property="og:description">
+        <meta content="summary_large_image" name="twitter:card">
+        <meta content="{{.Permalink}}" name="twitter:site">
+        <meta content="@jakentech" name="twitter:creator">
+        <meta content="{{.Title}}" name="twitter:title">
+        <meta content="{{.Description}}" name="twitter:description">
+        <meta content="{{ .Site.BaseURL }}{{.Params.artwork}}" name="twitter:image">
     </head>
     <body>
         {{- partial "header.html" . -}}
