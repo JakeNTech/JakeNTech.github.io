@@ -2,8 +2,8 @@
 title: "JakeNTech"
 menu: "main"
 draft: "false"
-description: "DUCKS!"
-artwork: "assets/img/writing.png"
+description: "You guessed it, its the site of JakeNTech.com. Shoking right?"
+artwork: "assets/img/pure_art.png"
 ---
 <div class="intro_points">
     <img src="/assets/img/255_8bit.png" id="POV">

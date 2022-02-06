@@ -2,6 +2,8 @@
 title: "About"
 menu: "about"
 draft: false
+description: "About page. Nothing more needs to be said here."
+artwork: "assets/img/pure_art.png"
 ---
 Why hello there &#128075; I'm Jake, a Forensic computing and security student at Bournemouth University.
 
