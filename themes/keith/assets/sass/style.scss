@@ -33,12 +33,6 @@ h1 a, h2 a{
 	color: $pink-colour;
 	text-decoration: none;
 }
-p{
-	color: $text-colour;
-}
-img{
-	max-width: 100%;
-}
 // HTML area specific
 header{
 	display: flex;
@@ -114,6 +108,11 @@ footer{
 	h4{
 		font-style: italic;
 		font-weight: normal;
+	}
+}
+.blog_content{
+	img{
+		max-width: 100%;
 	}
 }
 .blog_footer{
