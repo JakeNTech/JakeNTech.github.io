@@ -1,5 +1,6 @@
 $pink-colour: #e5559b;
 $text-colour: #000;
+$link-color: rgb(240, 45, 45);
 $background-colour: #fff;
 
 // Generic Styles
@@ -32,6 +33,9 @@ h2{
 h1 a, h2 a{
 	color: $pink-colour;
 	text-decoration: none;
+}
+p a{
+	color: $link-color;
 }
 // HTML area specific
 header{

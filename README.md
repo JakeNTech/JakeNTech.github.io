@@ -4,5 +4,5 @@ Bet it won't work :)
 
 To build:
 ```
-hugo -d ./docs
+hugo -d ./docs --disableKinds=taxonomyTerm
 ```
