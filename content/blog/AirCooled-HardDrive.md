@@ -1,7 +1,7 @@
 ---
 title: "Air Cooled Hard Drive"
 date: 2022-02-06T14:21:42
-draft: true
+draft: false
 description: "What tale does this fantastic piece of artwork have to tell us?"
 artwork: "assets/img/blog_images/air_cooled_drive/nice_and_cool.png"
 ---
