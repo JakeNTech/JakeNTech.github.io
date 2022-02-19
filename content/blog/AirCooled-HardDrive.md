@@ -63,11 +63,13 @@ Office documents were predominantly just Microsoft templates, but there was a do
   <img src="/assets/img/blog_images/air_cooled_drive/revision_attempt.png">
   <figcaption>Spellings? I don't think so!</figcaption>
 </figure>
+
 Now here comes the fun section, REG files. I love these files; they not only give some insight to the user of the machine but also information about the machine along with some of the devices that had been connected to the machine. We have 412 files to look through, my technique is to sort by the largest file and then just try opening them in [Eric Zimmerman’s Registry explorer](https://zimmerman.github.io/#!index.md) and to see what I can find. 
+
 Straight away I managed to open the SYSTEM file, which contains the key and value:
-```
-ControlSet001\Control\ComputerName\ComputerName : “JAKE-PC”
-```
+
+<i>ControlSet001\Control\ComputerName\ComputerName : “JAKE-PC”</i>
+
 Repeating the process of opening files, renaming them, or deleting them we are left with 46 files left to look at. There were some I couldn’t identify, possibly transaction logs or partial backups, a few that appeared to be application-specific and ones that just couldn’t be opened by Registry Explorer. 
 
 <figure>
@@ -82,13 +84,16 @@ I also found several SAM files, some from when the machine was used as our famil
   <figcaption>All Identified SQLite files</figcaption>
 </figure>
 
-A few files containing nothing but key: value pairs of `test: test` which was rather strange, as each file seemed to be a different size, I wonder if there is more to these files than meets the eye. But we had managed to pull files from the drive from two different installs of windows with plenty of information to look through. 
+A few files containing nothing but key: value pairs of <i>test: test</i> which was rather strange, as each file seemed to be a different size, I wonder if there is more to these files than meets the eye. But we had managed to pull files from the drive from two different installs of windows with plenty of information to look through. 
+
 One of the SOFTWARE files shows that Macrium Reflect was on the RUN key, with the last registry write being made back in 2017. Based on the dates from the SAM file, this was one of the last times this drive was used in this machine. I used Macruim reflect to clone the Windows drive to an Intel 40GB SSD. 
+
 The next set of files to look at are the Prefetch files. And these are also very cool, [Eric Zimmerman](https://zimmerman.github.io/#!index.md) has some amazing tools that can parse these files to give us all the information we need. The idea behind these files is it helps to speed up the launch of an Application, but from a forensics standpoint, it contains a few dates of the last times the applications were run along with the number of times they were run. Cool right?
+
 File names are pulled for these files, along with the addition added by PhotoRec, and a quick scroll through shows mainly system files. As such, based on the file names, I have separated the ones that would be indicative of user activity to have a browse through. To parse these files the below command is used:
-```
-'C:\Forensic Tools\CMD_TOOLS\PECmd.exe' -d "D:\air_cooled_drive\sorted\.pf\of_interest" --csv "D:\" --csvf output.csv
-``` 
+
+<i>> PECmd.exe' -d "D:\air_cooled_drive\sorted\.pf\of_interest" --csv "D:\" --csvf output.csv</i>
+ 
 We then have a CSV file that we can look at.  Some report Parsing Errors, this is to be expected when running against files that we have carved. 
 
 Looking at the CSV we can see that most files appear to be from 2017 with the most recent application being run on “15/07/2017 12:58:11”. The most run application is “IEXPLORE.EXE”, Microsoft Internet Explorer.
