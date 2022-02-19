@@ -6,20 +6,10 @@
     <description>Recent content on JakeNTech</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sun, 06 Feb 2022 14:21:42 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 31 Aug 2019 11:03:42 +0000</lastBuildDate>
     
 	<atom:link href="https://jakentech.com/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Air Cooled Hard Drive</title>
-      <link>https://jakentech.com/blog/aircooled-harddrive/</link>
-      <pubDate>Sun, 06 Feb 2022 14:21:42 +0000</pubDate>
-      
-      <guid>https://jakentech.com/blog/aircooled-harddrive/</guid>
-      <description>Three years ago, I took an intel stock cooler and hot glued it to an old Western Digital 80GB hard drive and created a piece of art. But what data does it hold? Well with nothing else to do it’s time to break out my Forensics VM and USB Write Blocker and have a snoop around.
-Just from what I can remember this drive was at some point used as a boot drive in our Family PC and a PC I used to mess about when trying to use various old IDE drives and random PCI cards.</description>
-    </item>
     
     <item>
       <title>CyberStart Elite 2019</title>
