@@ -15,7 +15,7 @@
 </section>
 <aside id="meta">
     <div class="blog_footer">
-      <h5 id="wordcount"> {{ .WordCount }} Words </h5>
+      <h5 id="wordcount"> {{ .WordCount }} Words. Reading time: About {{ math.Round (div (countwords .Content) 220.0) }} minutes.</h5>
     </div>
 </aside>
 {{ end }}

@@ -2,6 +2,7 @@ $pink-colour: #e5559b;
 $text-colour: #000;
 $link-color: rgb(240, 45, 45);
 $background-colour: #fff;
+$slight-grey-colour:#f0f0f0;
 
 // Generic Styles
 html{
@@ -42,6 +43,9 @@ header{
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
+	#home{
+		color: $pink-colour;	
+	}
 	h1{
 		font-weight: normal;
 		font-size: 3rem;
@@ -64,8 +68,8 @@ header{
 				margin-right: 0;
 			}
 			a{
-			color: $text-colour;
 			text-decoration: none;
+			color: $text-colour;
 			}
 		}
 	}
@@ -102,6 +106,10 @@ footer{
 			}
 		}
 	}
+	img{
+		border:#000;
+		margin: 2rem;
+	}
 }
 // Blog_Post CSS
 .blog_header{
@@ -117,6 +125,19 @@ footer{
 .blog_content{
 	img{
 		max-width: 100%;
+	}
+	figure{
+		align-items: center;
+		text-align: center;
+		figcaption{
+			font-style: italic;
+			background-color: $slight-grey-colour;
+			padding:1rem;
+		}
+	}
+	code{
+		display: flex;
+		word-wrap: normal;
 	}
 }
 .blog_footer{

@@ -3,13 +3,13 @@ title: "About"
 menu: "about"
 draft: false
 description: "About page. Nothing more needs to be said here."
-artwork: "assets/img/pure_art.png"
+artwork: "assets/img/jakeNenaduck.png"
 ---
-Why hello there &#128075; I'm Jake, a Forensic computing and security student at Bournemouth University.
+Why hello there &#128075; I'm Jake, I think, a Forensic computing and security student at Bournemouth University.
 
-I've been interested in computing since 2008, we didn't even have an internet connection at home, that was reserved for a trip to the local library if you wanted to Google something; Which meant we ended up playing a tonne of 90's PC games bought from charity shops and CeX. 
+I've been interested in computing since ~2008. We didn't even have an internet connection at the time, which made needing to Google something rather hard. I ended up playing a tonne of 90's PC games bought from charity shops and CeX. Legoland the Game anyone? No, just me...okay.
 
-Eventually, we got broadband at home; My YouTube consumption was huge, anyone else remembers ADFS movies or The Annoying Orange?  We also played a tonne of DS games, the number of hours I have in My Sims agents will amaze you.
+Eventually, we got broadband at home; My YouTube consumption was huge, remember ADFS movies or The Annoying Orange? The Nintendo DS was also a popular item in our house.
 
 I started to mess around with programming Python, HTML (not going to have that argument) and Java. [I have all the code I started messing about with here on GitHub](https://github.com/JakeNTech/GCSE-Python-Code), it's from a long time ago so take it easy on me &#128513;
 

@@ -1,7 +1,7 @@
 <header>
-    <h1><a href="{{ .Site.BaseURL}}">{{ .Site.Title}}</a></h1>
     <nav>
         <ul>
+            <li><a href="{{ .Site.BaseURL}}" id="home">Home</a></li>
             <li><a href="{{ ref . "about"}}">About</a></li>
             <li><a href="{{ ref . "blog"}}">Blog</a></li>
         </ul>

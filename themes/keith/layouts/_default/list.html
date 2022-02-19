@@ -9,8 +9,8 @@
     <!-- Ranges through content/posts/*.md -->
     {{ range .Pages }}
         <li id="blog_select">
-            <a href="{{.Permalink}}">{{.Title}} - {{.Date.Format "02-01-2006"}}</a>
-            <p href="{{.Permalink}}">{{.Description}}</p>
+            <a href="{{.Permalink}}">{{.Title}}</a>
+            <p href="{{.Permalink}}">{{.Description}} - <i>({{.Date.Format "02-01-2006"}})</i></p>
         </li>
     {{ end }}
     </ul>

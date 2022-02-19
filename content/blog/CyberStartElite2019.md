@@ -3,7 +3,7 @@ title: "CyberStart Elite 2019"
 date: 2019-08-31T11:03:42
 draft: false
 description: "A vist to SkyGarden, a week in the capital and a SANS FOR500 course!"
-artwork: "/assets/img/blog_images/CyberStart_Elite/Cybering_in_cyberspace.png"
+artwork: "assets/img/blog_images/CyberStart_Elite/Cybering_in_cyberspace.png"
 ---
 At the start of the second year of Cyber Discovery, I was invited to carry on with the program, for what I thought was going to be my last year due to my age. The first year was simply amazing with so many interesting, and frustrating, challenges. Somehow, I even managed to make it to CyberStart Elite in the first year (I still do not know how!). 
 
