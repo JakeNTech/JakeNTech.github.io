@@ -99,7 +99,7 @@
   <figcaption>Spellings? I don't think so!</figcaption>
 </figure>
 
-<p>Now here comes the fun section, REG files. I love these files; they not only give some insight to the user of the machine but also information about the machine along with some of the devices that had been connected to the machine. We have 412 files to look through, my technique is to sort by the largest file and then just try opening them in <a href="https://zimmerman.github.io/#!index.md">Eric Zimmerman’s Registry explorer</a> and to see what I can find.</p>
+<p>Now here comes the fun section, REG files. I love these files; they not only give some insight to the user of the machine but also information about the machine along with some of the devices that had been connected to the machine. We have 412 files to look through, my technique is to sort by the largest file and then just try opening them in <a href="https://ericzimmerman.github.io/">Eric Zimmerman’s Registry explorer</a> and to see what I can find.</p>
 
 <p>Straight away I managed to open the SYSTEM file, which contains the key and value:</p>
 
@@ -112,7 +112,7 @@
   <figcaption>All Identified Registry files</figcaption>
 </figure>
 
-<p>I also found several SAM files, some from when the machine was used as our family machine and others from when I was using the machine to “experiment” with. The first SAM file is shown to be 2.5MB. Using <a href="https://zimmerman.github.io/#!index.md">Registry Explorer</a> I can see that this is from when the drive was in our family machine, with three user accounts and the standard “Administrator” and “Guest” accounts. My account is reported to have been created on “28-10-2016 14:53” and last logged into on “22-07-2017 07:23:43”.</p>
+<p>I also found several SAM files, some from when the machine was used as our family machine and others from when I was using the machine to “experiment” with. The first SAM file is shown to be 2.5MB. Using <a href="https://ericzimmerman.github.io/">Registry Explorer</a> I can see that this is from when the drive was in our family machine, with three user accounts and the standard “Administrator” and “Guest” accounts. My account is reported to have been created on “28-10-2016 14:53” and last logged into on “22-07-2017 07:23:43”.</p>
 
 <p><figure>
   <img src="/assets/img/blog_images/air_cooled_drive/the_biggest_sam.png">
@@ -123,7 +123,7 @@
 
 <p>One of the SOFTWARE files shows that Macrium Reflect was on the RUN key, with the last registry write being made back in 2017. Based on the dates from the SAM file, this was one of the last times this drive was used in this machine. I used Macruim reflect to clone the Windows drive to an Intel 40GB SSD.</p>
 
-<p>The next set of files to look at are the Prefetch files. And these are also very cool, <a href="https://zimmerman.github.io/#!index.md">Eric Zimmerman</a> has some amazing tools that can parse these files to give us all the information we need. The idea behind these files is it helps to speed up the launch of an Application, but from a forensics standpoint, it contains a few dates of the last times the applications were run along with the number of times they were run. Cool right?</p>
+<p>The next set of files to look at are the Prefetch files. And these are also very cool, <a href="https://ericzimmerman.github.io/">Eric Zimmerman</a> has some amazing tools that can parse these files to give us all the information we need. The idea behind these files is it helps to speed up the launch of an Application, but from a forensics standpoint, it contains a few dates of the last times the applications were run along with the number of times they were run. Cool right?</p>
 
 <p>File names are pulled for these files, along with the addition added by PhotoRec, and a quick scroll through shows mainly system files. As such, based on the file names, I have separated the ones that would be indicative of user activity to have a browse through. To parse these files the below command is used:</p>
 

@@ -64,7 +64,7 @@ Office documents were predominantly just Microsoft templates, but there was a do
   <figcaption>Spellings? I don't think so!</figcaption>
 </figure>
 
-Now here comes the fun section, REG files. I love these files; they not only give some insight to the user of the machine but also information about the machine along with some of the devices that had been connected to the machine. We have 412 files to look through, my technique is to sort by the largest file and then just try opening them in [Eric Zimmerman’s Registry explorer](https://zimmerman.github.io/#!index.md) and to see what I can find. 
+Now here comes the fun section, REG files. I love these files; they not only give some insight to the user of the machine but also information about the machine along with some of the devices that had been connected to the machine. We have 412 files to look through, my technique is to sort by the largest file and then just try opening them in [Eric Zimmerman’s Registry explorer](https://ericzimmerman.github.io/) and to see what I can find. 
 
 Straight away I managed to open the SYSTEM file, which contains the key and value:
 
@@ -77,7 +77,7 @@ Repeating the process of opening files, renaming them, or deleting them we are l
   <figcaption>All Identified Registry files</figcaption>
 </figure>
 
-I also found several SAM files, some from when the machine was used as our family machine and others from when I was using the machine to “experiment” with. The first SAM file is shown to be 2.5MB. Using [Registry Explorer](https://zimmerman.github.io/#!index.md) I can see that this is from when the drive was in our family machine, with three user accounts and the standard “Administrator” and “Guest” accounts. My account is reported to have been created on “28-10-2016 14:53” and last logged into on “22-07-2017 07:23:43”.
+I also found several SAM files, some from when the machine was used as our family machine and others from when I was using the machine to “experiment” with. The first SAM file is shown to be 2.5MB. Using [Registry Explorer](https://ericzimmerman.github.io/) I can see that this is from when the drive was in our family machine, with three user accounts and the standard “Administrator” and “Guest” accounts. My account is reported to have been created on “28-10-2016 14:53” and last logged into on “22-07-2017 07:23:43”.
 
  <figure>
   <img src="/assets/img/blog_images/air_cooled_drive/the_biggest_sam.png">
@@ -88,7 +88,7 @@ A few files containing nothing but key: value pairs of <i>test: test</i> which w
 
 One of the SOFTWARE files shows that Macrium Reflect was on the RUN key, with the last registry write being made back in 2017. Based on the dates from the SAM file, this was one of the last times this drive was used in this machine. I used Macruim reflect to clone the Windows drive to an Intel 40GB SSD. 
 
-The next set of files to look at are the Prefetch files. And these are also very cool, [Eric Zimmerman](https://zimmerman.github.io/#!index.md) has some amazing tools that can parse these files to give us all the information we need. The idea behind these files is it helps to speed up the launch of an Application, but from a forensics standpoint, it contains a few dates of the last times the applications were run along with the number of times they were run. Cool right?
+The next set of files to look at are the Prefetch files. And these are also very cool, [Eric Zimmerman](https://ericzimmerman.github.io/) has some amazing tools that can parse these files to give us all the information we need. The idea behind these files is it helps to speed up the launch of an Application, but from a forensics standpoint, it contains a few dates of the last times the applications were run along with the number of times they were run. Cool right?
 
 File names are pulled for these files, along with the addition added by PhotoRec, and a quick scroll through shows mainly system files. As such, based on the file names, I have separated the ones that would be indicative of user activity to have a browse through. To parse these files the below command is used:
 
