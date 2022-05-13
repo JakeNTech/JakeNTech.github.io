@@ -75,18 +75,29 @@ header{
 	}
 }
 //Main_Index
-.intro_points{
+.center_box{
 	text-align: center;
 	h2{
 		text-align: center;
 		margin: 3rem 0;
 		color: $pink-colour;
 	}
+	button{
+		background-color: $pink-colour;
+		color: #fff;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 2rem;
+		border: none;
+		padding: 1.5rem;
+		margin: 1.5rem;
+		}
 }
 #POV{
 	width:auto;
 	height:15%;
-	max-height: 105px;
+	max-height: 200px;
 	margin: 3rem 0;
 	margin-bottom: 0.5rem;
 }
