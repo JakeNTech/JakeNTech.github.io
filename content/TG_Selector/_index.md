@@ -11,4 +11,4 @@ artwork: "assets/img/lost_duck.png"
     <div id="watcher"></div>
     <button type="button" onclick="display_series_episode()">Find an Episode!</button>
 </div>
-<script src="/assets/js/Episode.js"></script>
+<script src="/assets/java/episode.js"></script>

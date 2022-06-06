@@ -34,4 +34,4 @@ Want more (Dunno why you would though!)? Below are some social links and an emai
     </ul>
 </div>
 
-<script src="/assets/js/location.js" onload="location_selector()"></script>
+<script src="/assets/java/location.js" onload="location_selector()"></script>
