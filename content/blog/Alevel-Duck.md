@@ -43,6 +43,7 @@ A better battery setup would have been wise, but enough trips to Poundland and I
 The next item on the agenda I needed to tackle was the documentation, which was a headache, I also think I have used all the printer toner and paper there is trying to print the final article out, there were far too many pages (Around 200 I recall). It got out of hand!
 The duck was certainly a fun project that gave me, and probably others, a fair wedge of entertainment for a couple of months, no matter how injured I became due to not paying attention when using a soldering iron or a coping saw. Having completed the project with the duck I turned it into a VPN server and an HTPC. I do want to re-do this one day with a new duck case and a newer Pi. 
 
-The finished product, stood proud on the desk moments before falling off:
-
-![Image of the Ducko](/assets/img/blog_images/Alevel_Duck/Ducko.jpg)
+<figure>
+  <img src="/assets/img/blog_images/Alevel_Duck/Ducko.jpg">
+  <figcaption>The duck sitting proud on the desk, moments before falling off!</figcaption>
+</figure>

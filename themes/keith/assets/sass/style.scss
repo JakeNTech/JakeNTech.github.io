@@ -1,20 +1,95 @@
+// Light/Dark Mode
 $pink-colour: #e5559b;
-$text-colour: #000;
 $link-color: rgb(240, 45, 45);
-$background-colour: #fff;
-$slight-grey-colour:#f0f0f0;
+
+// Light Mode
+$light_background-colour: #fff;
+$light_text-colour: #000;
+$light_grey-colour:#CECECE;
+
+
+// Dark Mode
+$dark_background-colour: #292929;
+$dark_text-colour: #fff;
+$dark_grey-colour:#808080;
+
+
+// If Dark Mode
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: $dark_background-colour;
+        color: $dark_text-colour;
+    }
+	header{
+		ul{
+			li{
+				a{
+					color: $dark_text-colour;
+				}
+			}
+		}
+	}
+	.blog_content{
+		figure{
+			figcaption{
+				background-color: $dark_grey-colour;
+			}
+		}
+		table{
+			td, th {
+				border: 1px solid $dark_grey-colour;
+			}
+			tr:nth-child(even) {
+				background-color: $dark_grey-colour;
+			}
+		}
+	}
+}
+
+// If Light Mode
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: $light_background-colour;
+        color: $light_text-colour;
+    }
+	header{
+		ul{
+			li{
+				a{
+					color: $light_text-colour;
+				}
+			}
+		}
+	}
+	.blog_content{
+		figure{
+			figcaption{
+				background-color: $light_grey-colour;
+			}
+		}
+		table{
+			td, th {
+				border: 1px solid $light_grey-colour;
+			}
+			tr:nth-child(even) {
+				background-color: $light_grey-colour;
+			}
+		}
+	}
+}
+
 
 // Generic Styles
 html{
 	font-size: 50%;
 }
 body{
-	color: $text-colour;
-	background-color: $background-colour;
-	font: 2rem Tahoma, sans-serif;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 2rem;
 	margin: 20px auto;
 	padding: 0 10px;
 	max-width: 800px;
+	word-wrap: break-word;
 }
 @media (max-width: 800px) {
 	body {
@@ -25,11 +100,15 @@ h1{
 	color: $pink-colour;
 	font-weight: normal;
 	font-size: 4rem;
-	text-align: center;
 }
 h2{
+	color: $pink-colour;
 	font-weight: normal;
 	font-size: 3rem;
+}
+h3{
+	color: $pink-colour;
+	font-weight: normal;
 }
 h1 a, h2 a{
 	color: $pink-colour;
@@ -43,6 +122,8 @@ header{
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
 	#home{
 		color: $pink-colour;	
 	}
@@ -69,22 +150,30 @@ header{
 			}
 			a{
 			text-decoration: none;
-			color: $text-colour;
+			// color: $text-colour;
 			}
 		}
 	}
 }
-//Main_Index
+
+//Footer
+footer{
+	h4{
+		text-align: center;
+		font-weight: lighter;
+		font-size: 	12px;
+	}
+	a{
+		text-decoration: underline;
+		color: $link-color;
+	}
+}
+
 .center_box{
 	text-align: center;
-	h2{
-		text-align: center;
-		margin: 3rem 0;
-		color: $pink-colour;
-	}
 	button{
 		background-color: $pink-colour;
-		color: #fff;
+		color: $dark_text-colour;
 		text-align: center;
 		text-decoration: none;
 		display: inline-block;
@@ -92,20 +181,18 @@ header{
 		border: none;
 		padding: 1.5rem;
 		margin: 1.5rem;
-		}
+	}
 }
-#POV{
-	width:auto;
-	height:15%;
-	max-height: 200px;
-	margin: 3rem 0;
-	margin-bottom: 0.5rem;
+
+.content{
+	.title{
+		margin-bottom: 1rem;
+	}
 }
-//Footer
-footer{
-	margin-top: 3rem;
-	text-align: center;
+
+.social_links{
 	ul{
+		text-align: center;
 		list-style-type: none;
 		padding: 0;
 		margin: 0;
@@ -117,22 +204,17 @@ footer{
 			}
 		}
 	}
-	img{
-		border:#000;
-		margin: 2rem;
-	}
 }
+
 // Blog_Post CSS
 .blog_header{
 	text-align: center;
-	h2{
-		color: $pink-colour;
-	}
 	h4{
 		font-style: italic;
 		font-weight: normal;
 	}
 }
+
 .blog_content{
 	img{
 		max-width: 100%;
@@ -142,20 +224,67 @@ footer{
 		text-align: center;
 		figcaption{
 			font-style: italic;
-			background-color: $slight-grey-colour;
 			padding:1rem;
 		}
 	}
+	table{
+		//https://www.w3schools.com/html/tryit.asp?filename=tryhtml_table_intro
+		border-collapse: collapse;
+		width: 100%;
+		th{
+			color: $pink-colour;
+			font-weight: bold;
+		}
+		td, th {
+			text-align: left;
+			padding: 8px;
+		}
+	}
+	li{
+		a{
+			color: $link-color;
+		}
+	}
 }
+
 .blog_footer{
 	text-align: center;
+	img{
+		// border:$text-colour;
+		margin: 2rem;
+	}
 }
+
 // Blog_Listing_CSS	
-// #blog_select{
-//     border:1px solid #000;
-// 	margin-bottom: 10%;
-// 	text-decoration: none;
-// 	&:last-child{
-// 		margin-bottom: 0%;
-// 	}
-// }
+.blog_select{
+	a{
+		color: $link-color
+	}
+}
+
+// ID's
+#rainbow{
+	background:linear-gradient(90deg, Red, Orange, Yellow, Green, Blue, Indigo);
+	height:0.5rem;
+}
+
+#this_location{
+	text-align: center;
+	margin-top: 1rem;
+	font-style: italic;
+	span{
+		svg{
+			padding-right: 1rem;
+			color: $pink-colour;
+		}
+	}
+}
+
+#POV{
+	width:auto;
+	height:15%;
+	max-height: 200px;
+	margin: 3rem 0;
+	margin-bottom: 0.5rem;
+	border-radius: 5%;
+}

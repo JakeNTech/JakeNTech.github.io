@@ -68,7 +68,10 @@ Now here comes the fun section, REG files. I love these files; they not only giv
 
 Straight away I managed to open the SYSTEM file, which contains the key and value:
 
-<i>ControlSet001\Control\ComputerName\ComputerName : “JAKE-PC”</i>
+
+{{< highlight JSON "linenos=table,hl_lines=8 15-17,linenostart=1" >}}
+{"ControlSet001\Control\ComputerName\ComputerName" : “JAKE-PC”}
+{{< / highlight >}}
 
 Repeating the process of opening files, renaming them, or deleting them we are left with 46 files left to look at. There were some I couldn’t identify, possibly transaction logs or partial backups, a few that appeared to be application-specific and ones that just couldn’t be opened by Registry Explorer. 
 
@@ -92,7 +95,9 @@ The next set of files to look at are the Prefetch files. And these are also very
 
 File names are pulled for these files, along with the addition added by PhotoRec, and a quick scroll through shows mainly system files. As such, based on the file names, I have separated the ones that would be indicative of user activity to have a browse through. To parse these files the below command is used:
 
-<i>> PECmd.exe' -d "D:\air_cooled_drive\sorted\.pf\of_interest" --csv "D:\" --csvf output.csv</i>
+{{< highlight bash "linenos=table,linenostart=1" >}}
+PECmd.exe -d "D:\air_cooled_drive\sorted\.pf\of_interest" --csv "D:\" --csvf "output.csv"
+{{< / highlight >}}
  
 We then have a CSV file that we can look at.  Some report Parsing Errors, this is to be expected when running against files that we have carved. 
 

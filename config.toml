@@ -2,3 +2,6 @@ baseURL = "https://jakentech.com/"
 languageCode = "en-gb"
 title = "JakeNTech"
 theme = "keith"
+
+[markup.goldmark.renderer]
+unsafe= true

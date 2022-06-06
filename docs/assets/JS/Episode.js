@@ -22,11 +22,10 @@ var info_dict = {
     20:6,
     21:4,
     22:8,
-    23:6
 }
 
 function Series_Selector() {
-    Series = Math.floor((Math.random()*23)+1);
+    Series = Math.floor((Math.random()*22)+1);
     return Series
 }
 
@@ -39,6 +38,4 @@ function display_series_episode(){
     series = Series_Selector();
     episode = Episode_Selector(series);
     document.getElementById("watcher").innerHTML = "<p>Series "+series+"</p><p>Episode "+episode+"</p><a href='https://www.themoviedb.org/tv/45-top-gear/season/"+series+"/episode/"+episode+"'><button>View Episode Details on TMDB</button></a>"
-
-    return [series, episode]
 }

@@ -8,6 +8,7 @@
       <p>{{.Description}}</p>
       <h4 id="date"> {{ .Date.Format "January 2006" }} </h4>
     </div>
+    <div id="rainbow"></div>
         <article class="blog_content">
            {{ .Content }}
         </article>
@@ -15,7 +16,8 @@
 </section>
 <aside id="meta">
     <div class="blog_footer">
-      <h5 id="wordcount"> {{ .WordCount }} Words. Reading time: About {{ math.Round (div (countwords .Content) 220.0) }} minutes.</h5>
+      <h5 id="wordcount"> {{ .WordCount }} Words. Reading time: About {{ math.Round (div (countwords .Content) 220.0) }} minutes. Don't think this is accurate to be honest with you.</h5>
+      <img src="{{ .Site.BaseURL }}{{.Params.artwork}}">
     </div>
 </aside>
 {{ end }}

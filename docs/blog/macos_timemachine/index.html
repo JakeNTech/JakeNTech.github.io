@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+        <base href="https://jakentech.com/">
+        <title>The lost macOS Time Machine drive - JakeNTech</title>
+        <link rel="shortcut icon" href="/assets/img/favicon.png"/>
+        
+        <link rel="stylesheet" href="https://jakentech.com/sass/style.min.css">
+        
+        <meta content="website" property="og:type">
+        <meta content="https://jakentech.com/blog/macos_timemachine/" property="og:url">
+        <meta content="https://jakentech.com/assets/img/blog_images/Mac_OS_TimeMachine/timemachine_apple.png" property="og:image">
+        <meta content="JakeNTech" property="og:site_name">
+        <meta content="This is what happens when you get side tracked when working on another project." property="og:description">
+        <meta content="summary_large_image" name="twitter:card">
+        <meta content="https://jakentech.com/blog/macos_timemachine/" name="twitter:site">
+        <meta content="@jakentech" name="twitter:creator">
+        <meta content="The lost macOS Time Machine drive" name="twitter:title">
+        <meta content="This is what happens when you get side tracked when working on another project." name="twitter:description">
+        <meta content="https://jakentech.com/assets/img/blog_images/Mac_OS_TimeMachine/timemachine_apple.png" name="twitter:image">
+    </head>
+    <body><header>
+    <nav>
+        <ul>
+            <li><a href="https://jakentech.com/" id="home">Home</a></li>
+            <li><a href="https://jakentech.com/tg_selector/">TG Selector</a></li>
+            <li><a href="https://jakentech.com/about/">About</a></li>
+            <li><a href="https://jakentech.com/blog/">Blog</a></li>
+        </ul>
+    </nav>
+</header>
+<div id="content">
+<section id="main">
+  
+  <div>
+    <div class="blog_header">
+      <h2>The lost macOS Time Machine drive</h2>
+      <p>This is what happens when you get side tracked when working on another project.</p>
+      <h4 id="date"> June 2022 </h4>
+    </div>
+    <div id="rainbow"></div>
+        <article class="blog_content">
+           <p>For the last few months, I have been working on a selection of scripts to make going through carved files even easier, <a href="https://github.com/JakeNTech/post_file_carve">you can find the code here</a>. The process of testing these scripts was to carve files from my stash of drives, run the code and fix any errors and move on to the next drive.</p>
+<p>Then I found it, not only a drive I haven’t seen since 2019 but one I thought had died. My HGST 5k-1000-1000 (I have no idea either) but sharpied onto the drive is “Time Machine NEW”. I used to use this drive as a Time Machine for my MacBook. I honestly thought it died one evening while backing up, amazing that it even span up considering it&rsquo;s been sat in a draw of junk electronics for the last so many years.</p>
+<p>Best mount drive and see what we can find!</p>
+<h2 id="mounting-the-drive">Mounting the Drive</h2>
+<p>To look at the contents we have three options:</p>
+<ul>
+<li>Use FTK Imager to extract the files to a FAT/NTFS formatted disk and use a Windows VM to poke at the files</li>
+<li>Mount the Drive to a Linux VM and make it work</li>
+<li>Use macOS</li>
+</ul>
+<p>I ruled Windows out as I don’t know how much data is on this drive and don’t want to have to wait the rest of my life for the files to be copied out. I don&rsquo;t want to use my MacBook as it will still think this is a time machine drive and may start deleting the older backups. As it’s been a while since I’ve used my Linux VM I will give this a go, time to show it some love!</p>
+<p>I was expecting a bit of a headache trying to get the drive to mount, the only way I know to get an Apple formatted drive to work on Windows is either FTK or paid software. Connecting it to my XUbuntu VM and it just mounted like a normal drive. Thankfully it&rsquo;s HSF+ formatted rather than the new APFS. It’s also unencrypted, which would have added a few extra steps to accessing the drive (Although defeats the object of having the MacBook encrypted). There are backups ranging from November 2018 through to Match 2019.</p>
+<figure>
+  <img src="/assets/img/blog_images/Mac_OS_TimeMachine/Backups.png">
+  <figcaption>A list of all the backups stored on this drive</figcaption>
+</figure>
+<p>Let&rsquo;s get digging for files!</p>
+<h2 id="system-version">System Version</h2>
+<p>The best place to start would be to find out what OS we are working with; We need to find the “SystemVersion.plist”. The forensics Wiki states that we should find this at “/System/Libary/CoreServices/SystemVersion.plist”. It’s not long before we encounter our first issue.</p>
+<p>File permissions are very much present on this drive, and we can’t change them as the drive is read-only; The Simple workaround is to switch to the root user and then carry on.</p>
+<p>Looking for this file draws a blank, in this backup directory anyway. In “/Private/var/db/” there is a file called “PreviousSystemVersion.plist” the name suggests that this would be the details of a previous operating system after an update/upgrade. For us, this shows 10.11.6. A quick confirmation with a Mac tells this to be True:</p>
+<figure>
+  <img src="/assets/img/blog_images/Mac_OS_TimeMachine/macOS_Version.png">
+  <figcaption>macOS High Sierra showing Sierra as the previous OS</figcaption>
+</figure>
+<p>10.11.6 was El Capitan so we are most likely looking at either Mac OS Sierra or High Sierra. But I want a definitive answer.</p>
+<p>A quick CatFish search for “SystemVersion.plist” later and we see this file lives in a backup from 24th January 2019, with the file path “/Time_Machine/Backups.backupdb/SiriusBlack-MacBook /2019-01-24-184042/Macintosh SSD/System/Library/CoreServices/SystemVersion.plist”. It does indeed show we are rocking macOS 10.13.6 (High Sierra).</p>
+<p>We can use the “PreviousSystemVersion.plist” within this backup to know what OS was being used before this date, opening the file, “/Time_Machine/Backups.backupdb/SiriusBlack-MacBook/2019-01-24-184042/Macintosh SSD/private/var/db/PreviousSystemVersion.plist”, shows that it&rsquo;s an XML formatted PLIST, but also that the OS before this backup was macOS 10.12.6 (Sierra).</p>
+<p>As that seems rather messy, here is a handy table:</p>
+<table>
+<thead>
+<tr>
+<th>Backup Date</th>
+<th>PreviousSystem Version</th>
+<th>System Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2018-10-24</td>
+<td>10.11.6</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>2018-10-31</td>
+<td>10.11.6</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>2018-11-10</td>
+<td>10.11.6</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>2018-11-18</td>
+<td>10.11.6</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>2018-11-25</td>
+<td>10.11.6</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>2018-12-12</td>
+<td>10.11.6</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>2018-12-27</td>
+<td>10.12.6</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>2019-01-06</td>
+<td>10.12.6</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>2019-01-24</td>
+<td>10.12.6</td>
+<td>10.13.6</td>
+</tr>
+<tr>
+<td>2019-01-30</td>
+<td>10.12.6</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>2019-02-06</td>
+<td>10.12.6</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>2019-02-21</td>
+<td>10.12.6</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>2019-02-27</td>
+<td>10.12.6</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>2019-02-28</td>
+<td>10.12.6</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>2019-03-02</td>
+<td>10.12.6</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>2019-03-03</td>
+<td>10.12.6</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>2019-03-05</td>
+<td>10.12.6</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>2019-03-06</td>
+<td>10.12.6</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>2019-03-10</td>
+<td>10.12.6</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>2019-03-12</td>
+<td>10.12.6</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>2019-03-13</td>
+<td>10.12.6</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>2019-03-14</td>
+<td>10.12.6</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>2019-03-18</td>
+<td>10.12.6</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>2019-03-21</td>
+<td>10.12.6</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<p>While we still can’t say for definite when we upgrade from Sierra to High Sierra it would appear to be between 6th January 2019 and 27th December 2018.</p>
+<h2 id="applications">Applications</h2>
+<p>The next interesting thing to know would be what applications are installed, that way we know what program-specific artefacts we can look for (such as Internet History). Applications are stored in “/Applications”</p>
+<figure>
+  <img src="/assets/img/blog_images/Mac_OS_TimeMachine/Applications.png">
+  <figcaption>Listing out all the installed applications on the first backup</figcaption>
+</figure>
+<p>From memory, I don’t think I ever really installed a tonne of programs on the Mac, as that task was left to my PC/Hackintosh. We could list all the applications out from all the backups and compare them all; But honestly the applications I use a lot haven’t changed since 2017, with the likes of Chrome and Microsoft Office.</p>
+<h2 id="internet-history">Internet History</h2>
+<p>I used two browsers on this Mac: Google Chrome and Safari. Chrome has been my main browser for years now, but I do try others occasionally.</p>
+<h3 id="google-chrome">Google Chrome</h3>
+<p>On macOS, Chrome history is stored in “/Users/<username>/Library/Application Support/Google/Chrome/Profile_&lt;Profile_No&gt;/History” and is an SQLite file, as standard with Chromium-based browsers. We need to find this file, using Catfish search doesn’t show any results.</p>
+<p>I had an idea, a first for me (I can attribute this incredible feat to the Heartstopper playlist!) Let’s look at the biggest directory on the disk as that’s most likely to contain most of the files we need. A command later and the biggest backup we have is 37GB from 06-01-2019.</p>
+<figure>
+  <img src="/assets/img/blog_images/Mac_OS_TimeMachine/directory_size.png">
+  <figcaption>Listing out the size of all the backups</figcaption>
+</figure>
+<p>We still don’t find anything, even switching to the find command brings up nothing. In this big backup, we can see other artefacts but not the Chrome History file.</p>
+<p>Trying Catfish and Find from the “/Backups.backupdb/SiriusBlack-MacBook/” directory also didn’t bring up any Chrome based results, it did find several Safari History files however so we can move on for the time being.</p>
+<h3 id="safari-history">Safari History</h3>
+<p>We found 23 History.db files while trying to find Chrome history, out of 26 backups. With the help of some Python, we can copy them all out and then remove any files that have the same hash. This should make it much easier to go through them all.</p>
+<figure>
+  <img src="/assets/img/blog_images/Mac_OS_TimeMachine/Safari_History.png">
+  <figcaption>Thunar showing the extracted History.db files</figcaption>
+</figure>
+<p>Safari History, much like Chromium-based browsers, uses SQLite to store its history. There was a time when this was done using PLIST files, but those days are gone! Selecting the latest History file (2019/03/2019) using DB Browser there are two tables of interest.</p>
+<p>“history_visits” and “history_items”. The “History_items” table contains the URL, domain, visit count and other data. “History_visits” contains when a site was visited, the title, if the load was successful, and ids for redirect links. This latest file contains 878 rows/entries on the “history_visits” table and 501 rows/entries on “history_items”. You can link these two tables together using:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-SQL" data-lang="SQL"><span style="color:#66d9ef">SELECT</span> history_visits.id, history_visits.visit_time, history_visits.title, history_visits.load_successful, history_visits.redirect_source, history_visits.redirect_destination, history_items.url <span style="color:#66d9ef">FROM</span> history_visits <span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span> history_items <span style="color:#66d9ef">on</span> history_visits.history_item <span style="color:#f92672">=</span> history_items.id</code></pre></td></tr></table>
+</div>
+</div>
+<p>The site I viewed the most, unsurprisingly is Google at 142 visits, with Google Drive in second place with 10 visits. Other visits and URLs relate to the duck (once again), Science coursework, day trips in different places, Cyber Discovery, and Floatplane to list a few. The internet history on here confirms that this laptop wasn’t used for anything other than Sixth-form work and when I didn’t want to sit at my desktop.</p>
+<p>It&rsquo;s a shame we didn’t manage to recover my Chrome History as this would have included history from all the devices I used and would have included a lot more data. However, this is all stored with my Google account anyway; And it really wouldn’t have been very interesting.</p>
+<h2 id="system-files">System Files</h2>
+<p>Time to think about System artefacts, in Windows we have the registry that stores information about what files and folders were most recently used etc. A glance at the list on the <a href="https://forensicswiki.xyz/wiki/index.php?title=Mac_OS_X_10.9_-_Artifacts_Location">Forensics Wiki</a> there are three artefacts that I would like to find:</p>
+<ul>
+<li>com.apple.airport.preferences.plist</li>
+<li>com.apple.recentitems.plist</li>
+<li>com.apple.loginwindow.plist</li>
+</ul>
+<p>These are all user-specific artefacts and may not be used on High Sierra, to try to locate any of these files we can run “find ./ -name ‘&lt;plist_file&gt;’” as the root user, use Catfish (also as the Root user) or build upon the Python script used for the Safari History. Why not add more code to the script we have already spent time on?  <a href="https://github.com/JakeNTech/python_tools/tree/main/Time_Machine_Artefact_Extractor">The script I ended up using can be found here</a>. This removes duplicates, gives the files full permissions, and gives us a nice CSV file to look at! Good, init?</p>
+<figure>
+  <img src="/assets/img/blog_images/Mac_OS_TimeMachine/Extracted_artfacts.png ">
+  <figcaption>The handy CSV file we get outputted</figcaption>
+</figure>
+<p>As I’ve already dealt with Safari History and the System Version earlier let’s look at some of the Airport PLISTs.</p>
+<h3 id="comappleairportpreferencesplist">com.apple.airport.preferences.plist</h3>
+<p>To open this file, we can just use Firefox, as it’s not a Binary PLIST file. It makes it much nicer to look at than a command-line viewer such as bat-cat or even plistutil.</p>
+<p>SSID Names are stored as both Base64 and as a decoded string. The key name for the decoded string is “SSIDString”, nice and logical. Details about the network are stored; including when they were last connected, Channels used by that network and the Security that the network used. In the biggest file I had 9 networks:</p>
+<ul>
+<li>HomeWifi_5G
+<ul>
+<li>Last Connected Date: 2019-03-21T16:13:46Z</li>
+<li>Notes: Home Wi-Fi Connection</li>
+</ul>
+</li>
+<li>SpringfieldsWifi
+<ul>
+<li>Last Connected Date: 2019-01-26T10:32:33Z</li>
+<li>SecurityType: Open</li>
+<li>Notes: Shopping Center where I once tried to work on my self-Driving duck from Costa while the family was shopping.</li>
+</ul>
+</li>
+<li>Straight outta WAP
+<ul>
+<li>Lat Connected Date: 2019-03-19T14:04:37Z</li>
+<li>Notes: Mobile Hotspot so I could use my laptop in Sixth-form. I found the name on Reddit.</li>
+</ul>
+</li>
+<li>The gates cause bad signal
+<ul>
+<li>Last Connected Date: 2019-03-20T09:04:08Z</li>
+<li>Notes: Mobile Hotspot with a different name, it was a joke in our social circle.</li>
+</ul>
+</li>
+<li>_The Cloud
+<ul>
+<li>Last Connected Date: 2019-02-23T09:48:06Z</li>
+<li>Notes: Anyone who has ever been inside a Weatherspoon’s will know what this one is 😉</li>
+</ul>
+</li>
+<li>HomeWifi_5G
+<ul>
+<li>Last Connected Date: 2018-12-16T18:37:30Z</li>
+<li>Notes: I seem to recall we got a new Wireless Access point, I may be wrong though</li>
+</ul>
+</li>
+<li>HomeWifi_2G
+<ul>
+<li>Last Connected Date: 2018-12-10T15:01:00Z</li>
+<li>Notes: 2.4GHz band of our home Wi-Fi</li>
+</ul>
+</li>
+<li>Yell Alohomora for key
+<ul>
+<li>Last Connected Date: 2018-12-14T13:11:15Z</li>
+<li>Notes: Another mobile hotspot</li>
+</ul>
+</li>
+<li>_The Cloud
+<ul>
+<li>Last Connected Date: 2018-12-01T10:36:31Z</li>
+<li>Notes: Another Weatherspoon’s Wi-Fi</li>
+</ul>
+</li>
+</ul>
+<p>Looking through the other files I did find some additional SSIDs that aren’t present in this big file, they are all Mobile Hotspots, with names such as “You are the Wi-Fi to my Heart” and the networks we have listed but with different last connection dates.</p>
+<p>This gives me an idea for a future project!</p>
+<h3 id="comapplerecentitemsplist">com.apple.recentitems.plist</h3>
+<p>This wasn’t picked out by our script, it also wasn’t found using the Find command, a quick check with the MacBook shows that this file isn’t in “%home_Directory%/ Library/Preferences/com.apple.recentitems.plist”. Either this is a unique to me issue, or this artefact has changed since Mac OS X Mavericks. I doubt this is a unique issue to me as my Mac has no issues at all, so it is more than likely changed.</p>
+<p>After some more research (Googling), I came across a <a href="https://eforensicsmag.com/what-files-were-recently-accessed-by-justin-boncaldo/">blog post detailing</a>  the change away from this artefact to a very similar artefact, but with more files instead (and less information?). The new(er) artefacts are stored under  “%user_directory%/Library/Application Support/com.apple.sharedfilelist” which is a directory containing “SFL” files. They may have this extension, but they are still binary PLIST files (You ain’t fooling me).  The directory contains:</p>
+<ul>
+<li>RecentServers</li>
+<li>RecentHosts</li>
+<li>RecentDocuments</li>
+<li>RecentApplicaions</li>
+<li>ProjectItems</li>
+<li>FavouriteItems</li>
+</ul>
+<p>There is also another directory containing recent documents for specific applications in “com.apple.LSSharedFileList.ApplicationRecentDocuments”.</p>
+<p>Using Plistutil we can go through each file outputting the file to XML. The first file I chose was a “com.apple.LSSharedFileList.RecentDocuments.sfl” file. To say I fully understand the contents of this file would be a lie, there is a lot of Base64 that decodes to system-ey looking data that happens to include a file path and some rough detail of the document. The XML file we have parsed tells us the name of the recent document and the file path of it without any need to break out CyberChef.</p>
+<p>The file path doesn’t seem to have a key, and neither does it seem to be acting as a key. (Firefox could be doing a messy job of parsing this XML however).  Each file path of a recent file starts with “file://” and is URL encoded. This is just from one backup though, what about in any of the others?</p>
+<p>Going back and changing the script to add these new files shows they are present in 7 other backups. To go through them I copied out all files with the name “com.apple.LSSharedFileList.RecentDocuments”  into a new directory, got a small bash script together to pass each file through plistutil and append the output to a single file so we can use a combination of cat, grep and sort commands:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>FILES <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/home/rubeus/Desktop/Recent_Documents/*&#34;</span>
+<span style="color:#66d9ef">for</span> f in $FILES
+<span style="color:#66d9ef">do</span>
+  plistutil -i $f &gt;&gt; parsed.xml
+<span style="color:#66d9ef">done</span></code></pre></td></tr></table>
+</div>
+</div>
+<!-- <figure>
+  <img src="/assets/img/blog_images/Mac_OS_TimeMachine/bash_for_plist_util.png">
+  <figcaption>Some bash code largely stolen from the internet<figcaption>
+</figure> -->
+<p>“cat parsed.xml | grep ‘file://’ | sort -u” leaves a really interesting result; Lots of files relating to the self-driving duck make an appearance, some being coursework for BTEC Applied Science and BTEC IT. Also, evidence of CyberStart Essentials in here too. One file is just called “UCAS_Applicaion.pdf” and also plenty of image files with random names. We don’t need to worry about what these files may be, as we can just search the TimeMachine drive for them and see what they are.</p>
+<p>There is only one file that jumped out to me, all the others had rather sensible names “12309564_1656374184641885_1901268296986369075_o.jpg”, using catfish we get 29 results from several backups. All are the same size and from different locations, including the calendar of all places, sadly the image itself turned out to be less exciting:</p>
+<figure>
+  <img src="/assets/img/blog_images/Mac_OS_TimeMachine/chungus_image_name.jpg">
+  <figcaption>The good ol’ days of Windows XP Disk Defragmenter! I don’t know why I needed this<figcaption>
+</figure>
+<p>Looking at the collection of “com.apple.LSSharedFileList.RecentApplications.sfl” files they take on the same format as the recent documents file, but list applications instead:</p>
+<ul>
+<li>Boxer</li>
+<li>Contacts</li>
+<li>Discord</li>
+<li>FontBook</li>
+<li>GIMP</li>
+<li>GitHub Desktop</li>
+<li>Chrome</li>
+<li>Mail</li>
+<li>Excel</li>
+<li>PowerPoint</li>
+<li>Word</li>
+<li>Minecraft</li>
+<li>… the list goes on (I now have Don’t stop believing stuck in my head having typed that!)</li>
+</ul>
+<h3 id="comapplelssharedfilelistrecenthostssfl">com.apple.LSSharedFileList.RecentHosts.sfl</h3>
+<p>I didn’t plan to even find something like this file, hence the late addition (I found this while working on Finder items). Adding the name to our script we only see one on our TimeMachine drive and it’s from 2018.</p>
+<p>Using plistutil to get the binary file to XML once again, we can see much the same structure as the recent file files. Scrolling through the XML file I can see two machines listed in this file; my Raspberry Pi that I use as an HTPC, using SMB. And a 2006 iMac that was once our family machine, using AFP. I can&rsquo;t say I recall trying to set up file sharing on either of those two devices but I may have forgotten.</p>
+<h3 id="comappleloginwindowplist">com.apple.loginwindow.plist</h3>
+<p>It was at this point that I realised the list of artefacts I had written into my script either wasn’t complete or had Typos. Noting a bit of error-correcting can’t fix. Once done we found plenty of these files.</p>
+<p>This is a PLIST file detailing the last logged in user, and to no surprise of mine, the last logged in user was me:</p>
+<figure>
+  <img src="/assets/img/blog_images/Mac_OS_TimeMachine/loginwindow_plist.png">
+  <figcaption>The last logged in user was…ME!</figcaption>
+</figure>
+<h2 id="documents">Documents</h2>
+<p>To go through every other file, I decided to try something a bit different, running my post_file_carve tool against the drive to see what we get. This might sound mad, but it may help us out and is probably something I should have run at the start of the “investigation”. (It will also help with that project as we now have a very good start on PLIST files and SQLITE files to add over there).</p>
+<p>Some work was required to get the script to work, although not much. “ sudo python3 post_file_carve.py -d /media/rubues/Time_Machine/ “. The output CSV files can then be copied onto my localhost for looking at, Microsoft Excel makes it much easier.</p>
+<h3 id="jpgs">JPG’s</h3>
+<p>To remove duplicates from the spreadsheet I used the time the image was created, this isn’t perfect but for seeing what we’ve got it works just fine. With duplicate dates removed, we are left with 145 Images. Taken on a Samsung G900-F, HTC Desire C, TCL 5051X and a SONY ILCE-7RM2.</p>
+<p>Images from the Samsung Galaxy are general photos, as I had an S5 at the time, but most seem to be for the self-driving duck and various “Science” Projects. The HTC was my first smartphone and is the best photo it ever took of a day out we had as a family back in 2014. Three images taken by a TCL device appear to be from a day trip on the South Coast back in 2017. The last device is the SONY, this image was a professional photo of me at the Qufaro Cyber EPQ event back in September of 2018.</p>
+<h3 id="audio">Audio</h3>
+<p>The audio files seen by the script don’t seem to have pulled any metadata with them other than duration. Most are AIFF formatted, which makes sense being a Mac. The file paths involved show that these are notification sounds and other system sounds from Mac OS. There was one titled “pissed_off_duck-Mike_Koenig-1752213564.mp3”.</p>
+<p>I was surprised to see that my iTunes library isn’t on this drive, even back in 2019 I thought I had my CD library and albums bought on iTunes on this Mac. At least it didn’t have every CD in our house on it at this time, 70GB of just AIFF files are kept on there now 😲</p>
+<h3 id="office-documents">Office Documents</h3>
+<p>I expected there to be a lot of office documents as this machine is what I was using to do school/Sixthform stuff on at the time, with my PC being demoted to just games (Well Fortnite and GTA V.)
+Documents using the DOC, XLS, PPT extension seemed to be legal files for Steam, template files or documents given out while at Sixth form. Nothing exciting.</p>
+<p>The modern formatted documents (DOCX, XLSX, PPTX) were a lot more filled out. Mainly files from sixth-form for coursework, the CyberEPQ and CyberStart Essentials. Very interesting reads for me, as they are all things, I had forgotten about but not very exciting for anyone else, I’m sure. It was also interesting to see different versions of the same file; I still have the finished product of all the files stored somewhere but seeing half-finished A-level projects bought back the memories of “Will this ever be finished?!”.</p>
+<h3 id="text-files">Text Files</h3>
+<p>Back in sixth-form a mate decided to keep a track of all my odd spellings and what they dubbed &ldquo;Jake Moments&rdquo;; These were stored in a Text File but, sadly, between leaving school and now I have lost them. I had a copy of them on the MacBook as I once made a Twitter bot to tweet them at random, it was more of a project to see how easy it was to make a bot on Twitter.</p>
+<p>There were two files but I can&rsquo;t remember the names for either of them. So it&rsquo;s time for some Catfish searching, with the very helpful term &ldquo;jake&rdquo;.</p>
+<p>Twenty minutes later and it had found them, not in the backup directory however but in &ldquo;/media/rubeus/Time_Machine/.HFS+ Private Directory Data/dir_1166093/&quot;. I can&rsquo;t say I understand this path at all, <a href="https://apple.stackexchange.com/questions/31734/hfs-private-directory-data">a thread on StackExchange suggests this is something to do with linked files or APFS</a>. <a href="https://www.forensicfocus.com/forums/general/hfs-private-directory-data-dir/">Another source suggests this is part of the way TimeMachine works</a> After ending up down the Google rabbit hole, it would appear that this directory is the way HSF deals with hard-linked files. I would make the logical assumption that this is for files that don&rsquo;t change over multiple backups, why keep copying them when you can store them somewhere else and just link to them. I have no evidence to prove this, nor do I have any way of realistically testing this theory.</p>
+<p>But you want to see the files right? Me too! Below are the phrases that were dubbed &ldquo;Jake Moments&rdquo;:</p>
+<ul>
+<li>&ldquo;Does the mouse mat you have turn on?&rdquo;</li>
+<li>&ldquo;hes more socialer    er      er   er    socialer socialer than me&rdquo;</li>
+<li>&ldquo;i spelt it Face palm as in palm tree&rdquo;</li>
+<li>&ldquo;jozeph&rdquo;</li>
+<li>&ldquo;wireless logitech mouse mat&rdquo;</li>
+<li>&ldquo;my dad just paid off the mortgage on our garge&rdquo;</li>
+<li>&ldquo;i spelt rewind re-wind.&rdquo;</li>
+<li>&ldquo;thats a bad person does&rdquo;</li>
+<li>&ldquo;Could be a photo about.&rdquo;</li>
+<li>&ldquo;(Nice Socks) your welcome&rdquo;</li>
+<li>&ldquo;have (((a))) spaghetti&rdquo;</li>
+<li>&ldquo;to launch missiles from a submarine you have to use twitter&rdquo;</li>
+<li>&ldquo;Chippy is the new Microsoft Mascot&rdquo;</li>
+<li>&ldquo;Blurgh&rdquo;</li>
+<li>&ldquo;meh&rdquo;</li>
+<li>&ldquo;uh-guh-huh&rdquo;</li>
+<li>&ldquo;when the doorbell rings i open the fridge&rdquo;</li>
+</ul>
+<p>Time for all the spelling mistakes, to be honest I don&rsquo;t know how their isn&rsquo;t more on this list:</p>
+<table>
+<thead>
+<tr>
+<th>Mis_Spelling</th>
+<th>Correct_spelling</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tutoe</td>
+<td>tutor</td>
+</tr>
+<tr>
+<td>aleves</td>
+<td>A-Levels</td>
+</tr>
+<tr>
+<td>studebt</td>
+<td>Student</td>
+</tr>
+<tr>
+<td>extrams</td>
+<td>Extremes</td>
+</tr>
+<tr>
+<td>inmgs</td>
+<td>Images</td>
+</tr>
+<tr>
+<td>eoor</td>
+<td>Error</td>
+</tr>
+<tr>
+<td>ride</td>
+<td>Rude</td>
+</tr>
+<tr>
+<td>conor</td>
+<td>Connor</td>
+</tr>
+<tr>
+<td>rufe</td>
+<td>Rude</td>
+</tr>
+<tr>
+<td>Stuyent</td>
+<td>Student</td>
+</tr>
+<tr>
+<td>noise</td>
+<td>nose</td>
+</tr>
+<tr>
+<td>dpo</td>
+<td>do</td>
+</tr>
+<tr>
+<td>temi</td>
+<td>time</td>
+</tr>
+<tr>
+<td>halm</td>
+<td>harm</td>
+</tr>
+<tr>
+<td>de-moniorised</td>
+<td>de-monitised</td>
+</tr>
+<tr>
+<td>wheater</td>
+<td>weather</td>
+</tr>
+<tr>
+<td>dought</td>
+<td>doubt</td>
+</tr>
+<tr>
+<td>malwhere</td>
+<td>malware</td>
+</tr>
+<tr>
+<td>altough</td>
+<td>although</td>
+</tr>
+<tr>
+<td>Congaing</td>
+<td>Containing</td>
+</tr>
+<tr>
+<td>Libary</td>
+<td>Library</td>
+</tr>
+<tr>
+<td>Command</td>
+<td>common</td>
+</tr>
+<tr>
+<td>Wadge</td>
+<td>Wage</td>
+</tr>
+<tr>
+<td>policey</td>
+<td>policy</td>
+</tr>
+<tr>
+<td>crahsiong</td>
+<td>crashing</td>
+</tr>
+<tr>
+<td>ploicy)</td>
+<td>policy</td>
+</tr>
+<tr>
+<td>Joyed</td>
+<td>Joeyed</td>
+</tr>
+<tr>
+<td>Starts</td>
+<td>Stars (No.Times)</td>
+</tr>
+<tr>
+<td>privet</td>
+<td>private</td>
+</tr>
+<tr>
+<td>smutherd</td>
+<td>smothered</td>
+</tr>
+<tr>
+<td>wourld</td>
+<td>world</td>
+</tr>
+<tr>
+<td>steakholders</td>
+<td>Stakeholders</td>
+</tr>
+<tr>
+<td>arround</td>
+<td>around</td>
+</tr>
+<tr>
+<td>Knoked</td>
+<td>Knocked</td>
+</tr>
+<tr>
+<td>icey</td>
+<td>icy</td>
+</tr>
+<tr>
+<td>twords</td>
+<td>towards</td>
+</tr>
+<tr>
+<td>diog</td>
+<td>dog</td>
+</tr>
+<tr>
+<td>custoemr</td>
+<td>customer</td>
+</tr>
+<tr>
+<td>cusotemr</td>
+<td>customer</td>
+</tr>
+<tr>
+<td>promotuioonal</td>
+<td>promotional</td>
+</tr>
+<tr>
+<td>namne</td>
+<td>name</td>
+</tr>
+<tr>
+<td>genoprated</td>
+<td>generated</td>
+</tr>
+<tr>
+<td>emls</td>
+<td>elm</td>
+</tr>
+<tr>
+<td>insustrial</td>
+<td>industrial</td>
+</tr>
+<tr>
+<td>industrable</td>
+<td>industrial</td>
+</tr>
+<tr>
+<td>ender</td>
+<td>end</td>
+</tr>
+<tr>
+<td>laded</td>
+<td>labeled</td>
+</tr>
+<tr>
+<td>tog</td>
+<td>together</td>
+</tr>
+<tr>
+<td>Northmbaland</td>
+<td>Northumberland</td>
+</tr>
+<tr>
+<td>londnuim</td>
+<td>Londinium</td>
+</tr>
+<tr>
+<td>dorsit</td>
+<td>dorset</td>
+</tr>
+<tr>
+<td>heartferdshire</td>
+<td>hertfordshire</td>
+</tr>
+<tr>
+<td>sche</td>
+<td>scheme</td>
+</tr>
+<tr>
+<td>regterd</td>
+<td>registered</td>
+</tr>
+<tr>
+<td>sakater</td>
+<td>skater</td>
+</tr>
+<tr>
+<td>lerster</td>
+<td>leicester</td>
+</tr>
+<tr>
+<td>interperattor</td>
+<td>interpreter</td>
+</tr>
+<tr>
+<td>interoperates</td>
+<td>interprets</td>
+</tr>
+</tbody>
+</table>
+<p>To be fair to me most of those do look like I was just typing too fast, still funny though.</p>
+<h2 id="hsf-private-data-directory">.HSF+ Private Data Directory</h2>
+<p>Now I&rsquo;ve seen that this folder contains data it would be rude not to have a bit of a poke at it. The first few directories I opened were either blank or appeared to be a part of application files.</p>
+<p>Sorting by DateModifyed shows another item of interest, the oldest timestamp is 06/10/05, this contains a blank file called &ldquo;Acknowlagements.rtf&rdquo;. To go through all the files I&rsquo;ve run &ldquo;tree -L 3 &gt; /home/rubeus/Desktop/tree.txt&rdquo; as the root user and write the output to a text file, this way we will be able to see all the file names; Although as we saw in the last section this is likely the store of a tonne of files that didn&rsquo;t change throughout the backup. I think running this could be a bit of a mistake.</p>
+<p>The output shows that most of the files are indeed system files, however, I can see a lot of files that I would have created too. Files for the CyberEPQ, why I felt the need to hang onto “WannCry.RAR” I will never know.</p>
+<p>Other interesting files are:</p>
+<ul>
+<li><a href="https://github.com/JakeNTech/Shia-LeBeouf-Game">Shia LaBeouf The Game</a> and MP4 file</li>
+<li>Images of the Self Driving Duck</li>
+<li>Screenshots of WannaCry (with one called “MUM I INSTALLED A VIRUS.png” and one of the classic Windows screen tearing)</li>
+<li>The complete Undertale Soundtrack</li>
+<li>Some of my iTunes library</li>
+<li>Memes</li>
+</ul>
+<p>I also used this directory to test the post_file_carve script just to see what would happen, after some small adjustments though we did get a usable output and one that will allow me to add more macOS artefacts over on that project.</p>
+<p>You can’t stop thinking about memes now I have mentioned them, can you? Well, here it is!</p>
+<figure>
+  <img src="/assets/img/blog_images/Mac_OS_TimeMachine/Yahoo meme.jpg">
+  <figcaption>My sense of humour hasn’t changed one bit in the last 3 years</figcaption>
+</figure>
+<h2 id="the-end">The End</h2>
+<p>Working on a Time Machine backup was rather cool, it meant I didn’t have to deal with encryption on my old MacBook or battle with trying to get a hard drive out of a, what’s now considered a classic, iMac. Live imagine is possible for both; However, both devices only have USB 2.0 ports which would hamper performance a great deal. I would like to try some more macOS forensics but would need to get a newer Mac, one that could run the latest versions of macOS. The issue here is I don’t think I can justify buying another laptop/computer; I think I’ll have to try borrowing one of the university’s MacBooks later in the year if that’s something they still offer (It’s been just over two years since I last went onto campus).</p>
+<p>While working on this project I had the idea to write a series of Python scripts that would build upon the extractor tool and parse some of these files, in a similar way to my Post_file_carve scripts do. Just point the script at a time machine drive and let it go, come back to CSV files with all the information we have found above but nicely presented to you. Having the ability to auto copy some of the files out to make manual parsing even easier is also a decent goal. I would like to finish the post_file_carve scripts first though. Now we have even more artefacts we can add to them and several ideas to make it more efficient; It’s never going to be done, is it?</p>
+<p>Still, it’s something else to add to my to-do list now! Waiting for my final year at uni to start is a busier time than I thought!</p>
+
+        </article>
+  </div>
+</section>
+<aside id="meta">
+    <div class="blog_footer">
+      <h5 id="wordcount"> 4227 Words. Reading time: About 26 minutes. Don't think this is accurate to be honest with you.</h5>
+      <img src="https://jakentech.com/assets/img/blog_images/Mac_OS_TimeMachine/timemachine_apple.png">
+    </div>
+</aside>
+
+        </div><footer> 
+    <h4>Powered by <a href="https://gohugo.io/">Hugo</a> and a theme I called Keith</h4>
+</footer></body>
+</html>

@@ -1,6 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://jakentech.com/</loc>
+    <lastmod>2022-06-06T11:44:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jakentech.com/blog/macos_timemachine/</loc>
+    <lastmod>2022-06-06T11:44:00+00:00</lastmod>
+  </url>
   
   <url>
     <loc>https://jakentech.com/blog/aircooled-harddrive/</loc>
@@ -27,12 +37,7 @@
   </url>
   
   <url>
-    <loc>https://jakentech.com/</loc>
-    <lastmod>2022-02-19T15:25:42+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jakentech.com/topgear_randomiser/</loc>
+    <loc>https://jakentech.com/tg_selector/</loc>
   </url>
   
 </urlset>
