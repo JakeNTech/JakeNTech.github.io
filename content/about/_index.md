@@ -2,12 +2,12 @@
 title: "About"
 menu: "about"
 draft: false
-description: "About page. Nothing more needs to be said here."
+description: "An about section for an about page! Madness I tell you! Madness!"
 artwork: "assets/img/jakeNenaduck.png"
 ---
 <div id="this_location"></div>
 
-Hiya! &#128075; I'm Jake, a final-year Forensic computing and security student at Bournemouth University and end up working on side projects a lot, such as this site, or a range of Python scripts to help with file carving. I can also get caught up making memes with Paint.net (Forever grateful for being pointed in that direction)
+Hiya! &#128075; I'm Jake, a final-year Forensic computing and security student at Bournemouth University but can be found working on side projects, such as this site, or a range of Python scripts to help with file carving. Plenty of memes get made too (Thanks to the person who got me into using Paint.Net ... I've never laughed so hard &#128514;)
 
 All this computer stuff started before we got an internet connection at home (We had dial-up but it never got used). I ended up playing a tonne of 90's PC games bought from charity shops. Creating “barrel world” in the Legoland PC game? Just me…okay &#128513;
 

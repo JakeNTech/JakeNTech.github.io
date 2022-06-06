@@ -2,7 +2,7 @@
 title: "Top Gear Randomiser"
 draft: "false"
 menu: "TG_Selector"
-description: "Dunno Which Episode to watch? Now you do!"
+description: "It's my turn to chose a episode to watch"
 artwork: "assets/img/lost_duck.png"
 ---
 <div class="center_box">

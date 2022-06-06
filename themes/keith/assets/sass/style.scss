@@ -169,6 +169,7 @@ footer{
 	}
 }
 
+// Classes
 .center_box{
 	text-align: center;
 	button{
@@ -183,13 +184,11 @@ footer{
 		margin: 1.5rem;
 	}
 }
-
 .content{
 	.title{
 		margin-bottom: 1rem;
 	}
 }
-
 .social_links{
 	ul{
 		text-align: center;
@@ -205,8 +204,6 @@ footer{
 		}
 	}
 }
-
-// Blog_Post CSS
 .blog_header{
 	text-align: center;
 	h4{
@@ -214,7 +211,6 @@ footer{
 		font-weight: normal;
 	}
 }
-
 .blog_content{
 	img{
 		max-width: 100%;
@@ -246,7 +242,6 @@ footer{
 		}
 	}
 }
-
 .blog_footer{
 	text-align: center;
 	img{
@@ -254,11 +249,18 @@ footer{
 		margin: 2rem;
 	}
 }
-
-// Blog_Listing_CSS	
 .blog_select{
 	a{
 		color: $link-color
+	}
+}
+.bit_under_menu{
+	p{
+		margin-top:0rem;
+		font-style: italic;
+	}
+	h1{
+		margin-bottom: 1rem;
 	}
 }
 
