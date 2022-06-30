@@ -18,6 +18,6 @@ To remove metadata from All image files:
 $ exiftool -overwrite_original -recurse -all= *
 ```
 
-## To do:
+<!-- ## To do:
 -   Implement a dark mode -> Done, it will probably need some adjusting over time
--   Get Good
+-   Get Good -->

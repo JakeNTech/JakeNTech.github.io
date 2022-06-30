@@ -2,7 +2,7 @@
 title: "Self-Driving Duck"
 date: 2019-07-29T15:40:55
 draft: false
-description: "This is a page dedicated to my A-Level Project, trust me it needs a whole page! The Duck is just too needy!"
+description: "A Self-Driving Duck, using a Raspberry Pi? Yes, this was my A-level project"
 artwork: "assets/img/blog_images/Alevel_Duck/duck_art.png"
 ---
 Part of the OCR Computer Science A2 is a programming project, which made up a small percentage of the final grade. Our group had a bit of a thing about ducks, I think it’s a deep regret of the teachers telling us about rubber duck decoding and handing us small squeaky ducks. As the start of the project loomed, we had to start brainstorming ideas, my initial idea was a speed limit sign detection AI. On a trip to the south coast, my mum kept asking me what the speed limit was, as if I knew, having something in the car to tell you could be useful. Even now as someone who can drive, it’s easy to forget.

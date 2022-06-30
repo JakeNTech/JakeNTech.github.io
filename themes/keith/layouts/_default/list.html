@@ -4,6 +4,9 @@
         <div class="bit_under_menu">
             <h1 class="title">{{.Title}}</h1>
             <p>{{.Description}}</p>
+            {{if (eq .Title "About")}}
+                <div id="this_location"></div>
+            {{end}}
             <div id="rainbow"></div>
         </div>
         <!-- "{{.Content}}" pulls from the markdown content of the corresponding _index.md -->
@@ -13,8 +16,8 @@
     <!-- Ranges through content/posts/*.md -->
     {{ range .Pages }}
         <li class="blog_select">
-            <a href="{{.Permalink}}">{{.Title}}</a>
-            <p href="{{.Permalink}}">{{.Description}} - <i>({{.Date.Format "02-01-2006"}})</i></p>
+            <p><a href="{{.Permalink}}">{{.Title}}</a> - {{.Date.Format "January 2006"}}</p>
+            <p href="{{.Permalink}}">{{.Description}}</p>
         </li>
     {{ end }}
     </ul>

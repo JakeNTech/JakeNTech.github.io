@@ -8,8 +8,7 @@ artwork: "assets/img/pure_art.png"
 <div class="center_box">
     <img src="/assets/img/new_phone_who_dis.jpg" id="POV">
     <h2>Jake Nenadic</h2>
-    <p>Cyber, Memes and more!
-    <p>I don't know either to be honest &#129335;</p>
+    <p>Cyber, Paint.Net memes and other shenanigans.
     <div class="social_links">
         <ul>
             <!-- Twitter -->
