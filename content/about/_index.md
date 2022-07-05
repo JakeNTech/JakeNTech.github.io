@@ -14,11 +14,11 @@ I started to mess around with Python and Java after starting at Upper school (It
 
 Things took another turn when one of our computing teachers told us about a CyberEPQ in the first few weeks of sixth form. It sounded interesting and thought I’d give it ago. To say it was fascinating would be an understatement. Through this EPQ I found Cyber Discovery and things took off from there; being a part of the program for its four-year duration and gaining two GIACs in the process (GCFE and GCIA).
 
-Poking old hard drives is also very good fun, my Windows 8.1 VM is not too happy with the amount of up-time it has now. I dabble with Hack-The-Box and Try Hack Me now and again too. I also once lost a couple of weeks’ worth of free time trying to get an AI to predict network activity levels, “SUCH FUN!” – Penny, Miranda 2009.
+Poking old hard drives is also very good fun, my Windows 8.1 VM is not too happy with the amount of up-time it has now. I once lost a couple of weeks’ worth of free time trying to get an AI to predict network activity levels, “SUCH FUN!” – Penny, Miranda 2009.
 
 Correct spellings are a bit of a rarity around here too; The Grammarly usage is strong with this one!
 
-Want to see more of the chaos? Below are some social links and an email address for you
+Want to see more? Below are some links and an email address for you.
 
 <div class="social_links">
     <ul>

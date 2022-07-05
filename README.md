@@ -10,6 +10,7 @@ $ hugo server -D --disableFastRender --bind 192.168.0.2 --baseURL http://192.168
 
 To build site:
 ```console
+$ rm -r ./docs
 $ hugo -d ./docs --disableKinds=taxonomyTerm
 ```
 
