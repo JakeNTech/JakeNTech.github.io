@@ -8,18 +8,18 @@
         <link rel="shortcut icon" href="/assets/img/favicon.png"/>
         {{ $style := resources.Get "sass/style.scss" | resources.ToCSS | resources.Minify }}
         <link rel="stylesheet" href="{{ $style.Permalink }}">
-        {{/*  META STUFF  */}}
-        <meta content="website" property="og:type">
-        <meta content="{{.Permalink}}" property="og:url">
-        <meta content="{{ .Site.BaseURL }}{{.Params.artwork}}" property="og:image">
-        <meta content="JakeNTech" property="og:site_name">
-        <meta content="{{.Description}}" property="og:description">
-        <meta content="summary_large_image" name="twitter:card">
-        <meta content="{{.Permalink}}" name="twitter:site">
-        <meta content="@jakentech" name="twitter:creator">
-        <meta content="{{.Title}}" name="twitter:title">
-        <meta content="{{.Description}}" name="twitter:description">
-        <meta content="{{ .Site.BaseURL }}{{.Params.artwork}}" name="twitter:image">
+        {{/*  META STUFF https://developers.facebook.com/docs/sharing/webmasters/ */}}
+        <meta property="og:url" content="{{.Permalink}}" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="{{.Title}}" />
+        <meta property="og:description" content="{{.Description}}" />
+        <meta property="og:image" content="{{ .Site.BaseURL }}{{.Params.artwork}}" />
+        {{/*  https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/summary  */}}
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@JakeNTech" />
+        <meta name="twitter:title" content="{{.Title}}" />
+        <meta name="twitter:description" content="{{.Description}}" />
+        <meta name="twitter:image" content="{{ .Site.BaseURL }}{{.Params.artwork}}" />
     </head>
     <body>
         {{- partial "header.html" . -}}
