@@ -8,7 +8,7 @@ artwork: "assets/img/pure_art.png"
 <div class="center_box">
     <img src="/assets/img/new_phone_who_dis.jpg" id="POV">
     <h2>Jake Nenadic</h2>
-    <p>Cyber, Paint.Net memes and other shenanigans.
+    <p>Cyber, Paint.Net memes and other fun.</p>
     <div class="social_links">
         <ul>
             <!-- Twitter -->
