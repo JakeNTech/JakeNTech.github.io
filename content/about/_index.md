@@ -16,7 +16,7 @@ Things took another turn when one of our computing teachers told us about a Cybe
 
 Poking old hard drives is also very good fun, my Windows 8.1 VM is not too happy with the amount of up-time it has now. I once lost a couple of weeks’ worth of free time trying to get an AI to predict network activity levels, “SUCH FUN!” – Penny, Miranda 2009.
 
-Correct spellings are a bit of a rarity around here too; The Grammarly usage is strong with this one!
+Correct spellings are a rare thing around these parts too; The Grammarly usage is strong with this one!
 
 Want to see more? Below are some links and an email address for you.
 

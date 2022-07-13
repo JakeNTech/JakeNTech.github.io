@@ -1,10 +1,31 @@
 <header>
     <nav>
         <ul>
-            <li><a href="{{ .Site.BaseURL}}" id="home">Home</a></li>
+            {{/*  If the page is the homepage  */}}
+            {{if (eq .Title "JakeNTech")}}
+            <li><a href="{{ .Site.BaseURL}}" id="active_page">Home</a></li>
             <li><a href="{{ ref . "TG_Selector"}}">TG Selector</a></li>
             <li><a href="{{ ref . "about"}}">About</a></li>
             <li><a href="{{ ref . "blog"}}">Blog</a></li>
+            {{/*  is the page is the Top Gear Episode Selector  */}}
+            {{else if (eq .Title "Top Gear Episode Randomiser")}}
+            <li><a href="{{ .Site.BaseURL}}">Home</a></li>
+            <li><a href="{{ ref . "TG_Selector"}}"  id="active_page">TG Selector</a></li>
+            <li><a href="{{ ref . "about"}}">About</a></li>
+            <li><a href="{{ ref . "blog"}}">Blog</a></li>
+            {{/*  About Page  */}}
+            {{else if (eq .Title "About")}}
+            <li><a href="{{ .Site.BaseURL}}">Home</a></li>
+            <li><a href="{{ ref . "TG_Selector"}}">TG Selector</a></li>
+            <li><a href="{{ ref . "about"}}" id="active_page">About</a></li>
+            <li><a href="{{ ref . "blog"}}">Blog</a></li>
+            {{/*  Anything else/Blog Posts  */}}
+            {{else}}
+            <li><a href="{{ .Site.BaseURL}}">Home</a></li>
+            <li><a href="{{ ref . "TG_Selector"}}">TG Selector</a></li>
+            <li><a href="{{ ref . "about"}}">About</a></li>
+            <li><a href="{{ ref . "blog"}}" id="active_page">Blog</a></li>
+            {{end}}
         </ul>
     </nav>
 </header>
