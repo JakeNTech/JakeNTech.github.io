@@ -1,30 +1,30 @@
 // Light/Dark Mode
-$pink-colour: #e5559b;
+$pink-color: #e5559b;
 $link-color: rgb(240, 45, 45);
 
 // Light Mode
-$light_background-colour: #fff;
-$light_text-colour: #000;
-$light_grey-colour:#CECECE;
+$light_background-color: #fff;
+$light_text-color: #000;
+$light_grey-color:#CECECE;
 
 
 // Dark Mode
-$dark_background-colour: #292929;
-$dark_text-colour: #fff;
-$dark_grey-colour:#808080;
+$dark_background-color: #292929;
+$dark_text-color: #fff;
+$dark_grey-color:#808080;
 
 
 // If Dark Mode
 @media (prefers-color-scheme: dark) {
     body {
-        background-color: $dark_background-colour;
-        color: $dark_text-colour;
+        background-color: $dark_background-color;
+        color: $dark_text-color;
     }
 	header{
 		ul{
 			li{
 				a{
-					color: $dark_text-colour;
+					color: $dark_text-color;
 				}
 			}
 		}
@@ -32,15 +32,15 @@ $dark_grey-colour:#808080;
 	.blog_content{
 		figure{
 			figcaption{
-				background-color: $dark_grey-colour;
+				background-color: $dark_grey-color;
 			}
 		}
 		table{
 			td, th {
-				border: 1px solid $dark_grey-colour;
+				border: 1px solid $dark_grey-color;
 			}
 			tr:nth-child(even) {
-				background-color: $dark_grey-colour;
+				background-color: $dark_grey-color;
 			}
 		}
 	}
@@ -49,14 +49,14 @@ $dark_grey-colour:#808080;
 // If Light Mode
 @media (prefers-color-scheme: light) {
     body {
-        background-color: $light_background-colour;
-        color: $light_text-colour;
+        background-color: $light_background-color;
+        color: $light_text-color;
     }
 	header{
 		ul{
 			li{
 				a{
-					color: $light_text-colour;
+					color: $light_text-color;
 				}
 			}
 		}
@@ -64,15 +64,15 @@ $dark_grey-colour:#808080;
 	.blog_content{
 		figure{
 			figcaption{
-				background-color: $light_grey-colour;
+				background-color: $light_grey-color;
 			}
 		}
 		table{
 			td, th {
-				border: 1px solid $light_grey-colour;
+				border: 1px solid $light_grey-color;
 			}
 			tr:nth-child(even) {
-				background-color: $light_grey-colour;
+				background-color: $light_grey-color;
 			}
 		}
 	}
@@ -84,7 +84,7 @@ html{
 	font-size: 50%;
 }
 body{
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: 'Lato', sans-serif;
 	font-size: 2rem;
 	margin: 20px auto;
 	padding: 0 10px;
@@ -97,21 +97,21 @@ body{
 	}
 }
 h1{
-	color: $pink-colour;
+	color: $pink-color;
 	font-weight: normal;
 	font-size: 4rem;
 }
 h2{
-	color: $pink-colour;
+	color: $pink-color;
 	font-weight: normal;
 	font-size: 3rem;
 }
 h3{
-	color: $pink-colour;
+	color: $pink-color;
 	font-weight: normal;
 }
 h1 a, h2 a{
-	color: $pink-colour;
+	color: $pink-color;
 	text-decoration: none;
 }
 p a{
@@ -119,8 +119,8 @@ p a{
 }
 
 button{
-	background-color: $pink-colour;
-	color: $dark_text-colour;
+	background-color: $pink-color;
+	color: $dark_text-color;
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
@@ -139,7 +139,7 @@ header{
 	margin-top: 2rem;
 	margin-bottom: 2rem;
 	#active_page{
-		color: $pink-colour;	
+		color: $pink-color;	
 	}
 	h1{
 		font-weight: normal;
@@ -164,7 +164,7 @@ header{
 			}
 			a{
 			text-decoration: none;
-			// color: $text-colour;
+			// color: $text-color;
 			}
 		}
 	}
@@ -194,15 +194,10 @@ footer{
 }
 .social_links{
 	ul{
-		text-align: center;
-		list-style-type: none;
-		padding: 0;
-		margin: 0;
 		li{
-			display: inline-block;
-			padding: 0 20px;
+			padding-bottom: 1rem;
 			a{
-				color: $pink-colour;
+				color: $link-color;
 			}
 		}
 	}
@@ -229,7 +224,7 @@ footer{
 		border-collapse: collapse;
 		width: 100%;
 		th{
-			color: $pink-colour;
+			color: $pink-color;
 			font-weight: bold;
 		}
 		td, th {
@@ -246,13 +241,16 @@ footer{
 .blog_footer{
 	text-align: center;
 	img{
-		// border:$text-colour;
+		// border:$text-color;
 		margin: 2rem;
 	}
 }
 .blog_select{
 	a{
 		color: $link-color
+	}
+	img{
+		max-height: 20rem;
 	}
 }
 .bit_under_menu{
@@ -270,14 +268,13 @@ footer{
 	height:0.5rem;
 }
 
-#this_location,#date{
+#this_location,#post_info{
 	margin-top: 1rem;
 	margin-bottom: 1rem;
-	span{
-		svg{
-			padding-right: 1rem;
-			color: $pink-colour;
-		}
+	svg{
+		color: $pink-color;
+		margin-right:1rem;
+		margin-left:0.5rem
 	}
 }
 

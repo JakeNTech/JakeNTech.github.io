@@ -3,9 +3,8 @@
     <article>
         <div class="bit_under_menu">
             <h1 class="title">{{.Title}}</h1>
-            <p>{{.Description}}</p>
-            {{if (eq .Title "About")}}
-                <div id="this_location"></div>
+            {{if (eq .Title "About Me")}}
+                <p id="this_location">Location: 404</p>
             {{end}}
             <div id="rainbow"></div>
         </div>

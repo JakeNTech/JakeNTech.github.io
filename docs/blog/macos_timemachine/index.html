@@ -7,7 +7,12 @@
         <title>The lost macOS Time Machine drive - JakeNTech</title>
         <link rel="shortcut icon" href="/assets/img/favicon.png"/>
         
+        
         <link rel="stylesheet" href="https://jakentech.com/sass/style.min.css">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap" rel="stylesheet">
         
         <meta property="og:url" content="https://jakentech.com/blog/macos_timemachine/" />
         <meta property="og:type" content="website" />
@@ -20,6 +25,8 @@
         <meta name="twitter:title" content="The lost macOS Time Machine drive" />
         <meta name="twitter:description" content="This is what happens when you get side tracked when working on another project." />
         <meta name="twitter:image" content="https://jakentech.com/assets/img/blog_images/Mac_OS_TimeMachine/timemachine_apple.png" />
+        
+        <meta name="description"content="This is what happens when you get side tracked when working on another project.">
     </head>
     <body><header>
     <nav>
@@ -27,7 +34,6 @@
             
             
             <li><a href="https://jakentech.com/">Home</a></li>
-            <li><a href="https://jakentech.com/tg_selector/">TG Selector</a></li>
             <li><a href="https://jakentech.com/about/">About</a></li>
             <li><a href="https://jakentech.com/blog/" id="active_page">Blog</a></li>
             
@@ -40,21 +46,12 @@
   <div>
     <div class="blog_header">
       <h2>The lost macOS Time Machine drive</h2>
+      <p><i>June 2022</i></p>
       <p>This is what happens when you get side tracked when working on another project.</p>
       
-      <div id="date">
-        <span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" style="color:#e5559b;padding-right:1rem;" fill="currentColor" class="bi bi-calendar3" viewBox="0 0 16 16">
-            <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/>
-            <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
-          </svg>
-          June 2022
-        </span>
-      </div>
-    </div>
     <div id="rainbow"></div>
-        <article class="blog_content">
-           <p>For the last few months, I have been working on a selection of scripts to make going through carved files even easier, <a href="https://github.com/JakeNTech/post_file_carve">you can find the code here</a>. The process of testing these scripts was to carve files from my stash of drives, run the code and fix any errors and move on to the next drive.</p>
+      <article class="blog_content">
+          <p>For the last few months, I have been working on a selection of scripts to make going through carved files even easier, <a href="https://github.com/JakeNTech/post_file_carve">you can find the code here</a>. The process of testing these scripts was to carve files from my stash of drives, run the code and fix any errors and move on to the next drive.</p>
 <p>Then I found it, not only a drive I haven’t seen since 2019 but one I thought had died. My HGST 5k-1000-1000 (I have no idea either) but sharpied onto the drive is “Time Machine NEW”. I used to use this drive as a Time Machine for my MacBook. I honestly thought it died one evening while backing up, amazing that it even span up considering it&rsquo;s been sat in a draw of junk electronics for the last so many years.</p>
 <p>Best mount drive and see what we can find!</p>
 <h2 id="mounting-the-drive">Mounting the Drive</h2>
@@ -241,12 +238,30 @@
 </figure>
 <p>Safari History, much like Chromium-based browsers, uses SQLite to store its history. There was a time when this was done using PLIST files, but those days are gone! Selecting the latest History file (2019/03/2019) using DB Browser there are two tables of interest.</p>
 <p>“history_visits” and “history_items”. The “History_items” table contains the URL, domain, visit count and other data. “History_visits” contains when a site was visited, the title, if the load was successful, and ids for redirect links. This latest file contains 878 rows/entries on the “history_visits” table and 501 rows/entries on “history_items”. You can link these two tables together using:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-SQL" data-lang="SQL"><span style="color:#66d9ef">SELECT</span> history_visits.id, history_visits.visit_time, history_visits.title, history_visits.load_successful, history_visits.redirect_source, history_visits.redirect_destination, history_items.url <span style="color:#66d9ef">FROM</span> history_visits <span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span> history_items <span style="color:#66d9ef">on</span> history_visits.history_item <span style="color:#f92672">=</span> history_items.id</code></pre></td></tr></table>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-SQL" data-lang="SQL"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> history_visits.id,
+</span></span><span style="display:flex;"><span>  history_visits.visit_time,
+</span></span><span style="display:flex;"><span>  history_visits.title,
+</span></span><span style="display:flex;"><span>  history_visits.load_successful,
+</span></span><span style="display:flex;"><span>  history_visits.redirect_source,
+</span></span><span style="display:flex;"><span>  history_visits.redirect_destination,
+</span></span><span style="display:flex;"><span>  history_items.url
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> history_visits
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">LEFT</span> <span style="color:#66d9ef">JOIN</span> history_items
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">on</span> history_visits.history_item <span style="color:#f92672">=</span> history_items.id</span></span></code></pre></td></tr></table>
 </div>
 </div>
 <p>The site I viewed the most, unsurprisingly is Google at 142 visits, with Google Drive in second place with 10 visits. Other visits and URLs relate to the duck (once again), Science coursework, day trips in different places, Cyber Discovery, and Floatplane to list a few. The internet history on here confirms that this laptop wasn’t used for anything other than Sixth-form work and when I didn’t want to sit at my desktop.</p>
@@ -283,7 +298,7 @@
 </li>
 <li>Straight outta WAP
 <ul>
-<li>Lat Connected Date: 2019-03-19T14:04:37Z</li>
+<li>Last Connected Date: 2019-03-19T14:04:37Z</li>
 <li>Notes: Mobile Hotspot so I could use my laptop in Sixth-form. I found the name on Reddit.</li>
 </ul>
 </li>
@@ -341,22 +356,22 @@
 <p>Using Plistutil we can go through each file outputting the file to XML. The first file I chose was a “com.apple.LSSharedFileList.RecentDocuments.sfl” file. To say I fully understand the contents of this file would be a lie, there is a lot of Base64 that decodes to system-ey looking data that happens to include a file path and some rough detail of the document. The XML file we have parsed tells us the name of the recent document and the file path of it without any need to break out CyberChef.</p>
 <p>The file path doesn’t seem to have a key, and neither does it seem to be acting as a key. (Firefox could be doing a messy job of parsing this XML however).  Each file path of a recent file starts with “file://” and is URL encoded. This is just from one backup though, what about in any of the others?</p>
 <p>Going back and changing the script to add these new files shows they are present in 7 other backups. To go through them I copied out all files with the name “com.apple.LSSharedFileList.RecentDocuments”  into a new directory, got a small bash script together to pass each file through plistutil and append the output to a single file so we can use a combination of cat, grep and sort commands:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
-</span><span style="color:#75715e"></span>FILES <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/home/rubeus/Desktop/Recent_Documents/*&#34;</span>
-<span style="color:#66d9ef">for</span> f in $FILES
-<span style="color:#66d9ef">do</span>
-  plistutil -i $f &gt;&gt; parsed.xml
-<span style="color:#66d9ef">done</span></code></pre></td></tr></table>
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>FILES <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/home/rubeus/Desktop/Recent_Documents/*&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> f in $FILES
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>  plistutil -i $f &gt;&gt; parsed.xml
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">done</span></span></span></code></pre></td></tr></table>
 </div>
 </div>
 <!-- <figure>
@@ -436,8 +451,8 @@ Documents using the DOC, XLS, PPT extension seemed to be legal files for Steam, 
 <table>
 <thead>
 <tr>
-<th>Mis_Spelling</th>
-<th>Correct_spelling</th>
+<th>My sspelling</th>
+<th>Correct spelling</th>
 </tr>
 </thead>
 <tbody>
@@ -695,22 +710,22 @@ Documents using the DOC, XLS, PPT extension seemed to be legal files for Steam, 
   <img src="/assets/img/blog_images/Mac_OS_TimeMachine/Yahoo meme.jpg">
   <figcaption>My sense of humour hasn’t changed one bit in the last 3 years</figcaption>
 </figure>
-<h2 id="the-end">The End</h2>
+<h2 id="round-up">Round up</h2>
 <p>Working on a Time Machine backup was rather cool, it meant I didn’t have to deal with encryption on my old MacBook or battle with trying to get a hard drive out of a, what’s now considered a classic, iMac. Live imagine is possible for both; However, both devices only have USB 2.0 ports which would hamper performance a great deal. I would like to try some more macOS forensics but would need to get a newer Mac, one that could run the latest versions of macOS. The issue here is I don’t think I can justify buying another laptop/computer; I think I’ll have to try borrowing one of the university’s MacBooks later in the year if that’s something they still offer (It’s been just over two years since I last went onto campus).</p>
 <p>While working on this project I had the idea to write a series of Python scripts that would build upon the extractor tool and parse some of these files, in a similar way to my Post_file_carve scripts do. Just point the script at a time machine drive and let it go, come back to CSV files with all the information we have found above but nicely presented to you. Having the ability to auto copy some of the files out to make manual parsing even easier is also a decent goal. I would like to finish the post_file_carve scripts first though. Now we have even more artefacts we can add to them and several ideas to make it more efficient; It’s never going to be done, is it?</p>
 <p>Still, it’s something else to add to my to-do list now! Waiting for my final year at uni to start is a busier time than I thought!</p>
 
-        </article>
+      </article>
+    <h2>The End.</h2>
   </div>
 </section>
 <aside id="meta">
     <div class="blog_footer">
-      <h5 id="wordcount"> 4227 Words. Reading time: About 26 minutes. (Not convinced this is all too accurate.)</h5>
       <img src="https://jakentech.com/assets/img/blog_images/Mac_OS_TimeMachine/timemachine_apple.png">
     </div>
 </aside>
 
         </div><footer> 
-    <h4>Powered by <a href="https://gohugo.io/">Hugo</a> and a theme I called Keith</h4>
+    <h4>Powered by <a href="https://gohugo.io/">Hugo</a> using a theme I called Keith.</h4>
 </footer></body>
 </html>

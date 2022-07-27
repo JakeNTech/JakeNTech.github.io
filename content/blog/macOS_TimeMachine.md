@@ -118,7 +118,16 @@ Safari History, much like Chromium-based browsers, uses SQLite to store its hist
 “history_visits” and “history_items”. The “History_items” table contains the URL, domain, visit count and other data. “History_visits” contains when a site was visited, the title, if the load was successful, and ids for redirect links. This latest file contains 878 rows/entries on the “history_visits” table and 501 rows/entries on “history_items”. You can link these two tables together using:
 
 {{< highlight SQL "linenos=table,linenostart=1" >}}
-SELECT history_visits.id, history_visits.visit_time, history_visits.title, history_visits.load_successful, history_visits.redirect_source, history_visits.redirect_destination, history_items.url FROM history_visits LEFT JOIN history_items on history_visits.history_item = history_items.id
+SELECT history_visits.id,
+  history_visits.visit_time,
+  history_visits.title,
+  history_visits.load_successful,
+  history_visits.redirect_source,
+  history_visits.redirect_destination,
+  history_items.url
+FROM history_visits
+LEFT JOIN history_items
+  on history_visits.history_item = history_items.id
 {{< / highlight >}}
 
 The site I viewed the most, unsurprisingly is Google at 142 visits, with Google Drive in second place with 10 visits. Other visits and URLs relate to the duck (once again), Science coursework, day trips in different places, Cyber Discovery, and Floatplane to list a few. The internet history on here confirms that this laptop wasn’t used for anything other than Sixth-form work and when I didn’t want to sit at my desktop. 
@@ -154,7 +163,7 @@ SSID Names are stored as both Base64 and as a decoded string. The key name for t
   - SecurityType: Open
   - Notes: Shopping Center where I once tried to work on my self-Driving duck from Costa while the family was shopping.
 - Straight outta WAP
-  - Lat Connected Date: 2019-03-19T14:04:37Z
+  - Last Connected Date: 2019-03-19T14:04:37Z
   - Notes: Mobile Hotspot so I could use my laptop in Sixth-form. I found the name on Reddit.
 - The gates cause bad signal
   - Last Connected Date: 2019-03-20T09:04:08Z
@@ -303,7 +312,7 @@ But you want to see the files right? Me too! Below are the phrases that were dub
 
 Time for all the spelling mistakes, to be honest I don't know how their isn't more on this list:
 
-| Mis_Spelling   | Correct_spelling |
+| My sspelling    | Correct spelling |
 |----------------|------------------|
 | tutoe          | tutor            |
 | aleves         | A-Levels         |
@@ -391,7 +400,7 @@ You can’t stop thinking about memes now I have mentioned them, can you? Well, 
   <figcaption>My sense of humour hasn’t changed one bit in the last 3 years</figcaption>
 </figure>
 
-## The End
+## Round up
 Working on a Time Machine backup was rather cool, it meant I didn’t have to deal with encryption on my old MacBook or battle with trying to get a hard drive out of a, what’s now considered a classic, iMac. Live imagine is possible for both; However, both devices only have USB 2.0 ports which would hamper performance a great deal. I would like to try some more macOS forensics but would need to get a newer Mac, one that could run the latest versions of macOS. The issue here is I don’t think I can justify buying another laptop/computer; I think I’ll have to try borrowing one of the university’s MacBooks later in the year if that’s something they still offer (It’s been just over two years since I last went onto campus). 
 
 While working on this project I had the idea to write a series of Python scripts that would build upon the extractor tool and parse some of these files, in a similar way to my Post_file_carve scripts do. Just point the script at a time machine drive and let it go, come back to CSV files with all the information we have found above but nicely presented to you. Having the ability to auto copy some of the files out to make manual parsing even easier is also a decent goal. I would like to finish the post_file_carve scripts first though. Now we have even more artefacts we can add to them and several ideas to make it more efficient; It’s never going to be done, is it?
