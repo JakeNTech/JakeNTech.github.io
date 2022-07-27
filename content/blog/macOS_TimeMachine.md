@@ -312,7 +312,7 @@ But you want to see the files right? Me too! Below are the phrases that were dub
 
 Time for all the spelling mistakes, to be honest I don't know how their isn't more on this list:
 
-| My sspelling    | Correct spelling |
+| My spelling    | Correct spelling |
 |----------------|------------------|
 | tutoe          | tutor            |
 | aleves         | A-Levels         |
