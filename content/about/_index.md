@@ -15,7 +15,7 @@ Through this EPQ I discovered Cyber Discovery and things took off from there; pa
 
 For a bit of fun, and a challenge, I poke around with old hard drives to see what they had on them before they were formatted, along with other random projects for things that seem cool to experiment with. I once lost a couple of weeks’ worth of free time trying to get an AI to predict future network activity levels. Some of these projects even get [blog posts!](https://jakentech.com/blog) However most just end up on GitHub.
 
-Outside of computing I enjoy traveling, binge watching TV series, playing Forza, reading and cooking; Well I say cooking but it tends to end up being a huge mess with one burnt object and another underdone food item on a plate. In this process every Gordon Ramsey meme under the sun gets sent to friends and at some point someone will stroll into the kitchen just to watch me nearly take my fingers off with a knife that is far too small "because I was scared to use a bigger one".
+Outside of computing I enjoy traveling, binge watching TV series, playing Forza, reading and cooking; Well I say cooking but it tends to end up being a huge mess with one burnt object and another underdone food item on a plate. In this process every Gordon Ramsey meme under the sun gets sent to friends with the occasional free test of the smoke alarm.
 
 Currently, I'm a final year student at Bournemouth university studying Forensic Computing and Security looking to move into the industry.
 
