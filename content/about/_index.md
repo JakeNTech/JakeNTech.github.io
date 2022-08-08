@@ -30,7 +30,7 @@ Want to see more? Below are some links and an email address for you.
             <!-- LinkedIn -->
             <li><a href="https://www.linkedin.com/in/jake-nenadic-5a8989187/">LinkedIn</a> - A professional profile for professional people.</li>
             <!-- mail -->
-            <li><a href="mailto:hello@jakentech.com">Email</a> - How many mailing lists will this address end up on?</li>
+            <li><a href="mailto:jakentech@gmail.com">Email</a> - How many mailing lists will this address end up on?</li>
         </ul>
     </div>
 

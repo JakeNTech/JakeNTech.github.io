@@ -1,6 +1,6 @@
 // Light/Dark Mode
 $pink-color: #e5559b;
-$link-color: rgb(240, 45, 45);
+$link-color: #f02d2d;
 
 // Light Mode
 $light_background-color: #fff;
@@ -271,11 +271,6 @@ footer{
 #this_location,#post_info{
 	margin-top: 1rem;
 	margin-bottom: 1rem;
-	svg{
-		color: $pink-color;
-		margin-right:1rem;
-		margin-left:0.5rem
-	}
 }
 
 #POV{
