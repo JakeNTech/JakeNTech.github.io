@@ -6,16 +6,24 @@
             <li><a href="{{ .Site.BaseURL}}" id="active_page">Home</a></li>
             <li><a href="{{ ref . "about"}}">About</a></li>
             <li><a href="{{ ref . "blog"}}">Blog</a></li>
+            <li><a href="{{ ref . "TG_Selector"}}">TG_Selector</a></li>
             {{/*  About Page  */}}
             {{else if (eq .Title "About Me")}}
             <li><a href="{{ .Site.BaseURL}}">Home</a></li>
             <li><a href="{{ ref . "about"}}" id="active_page">About</a></li>
             <li><a href="{{ ref . "blog"}}">Blog</a></li>
+            <li><a href="{{ ref . "TG_Selector"}}">TG_Selector</a></li>
+            {{else if (eq .Title "Top Gear Episode Randomiser")}}
+            <li><a href="{{ .Site.BaseURL}}">Home</a></li>
+            <li><a href="{{ ref . "about"}}">About</a></li>
+            <li><a href="{{ ref . "blog"}}">Blog</a></li>
+            <li><a href="{{ ref . "TG_Selector"}}" id="active_page">TG_Selector</a></li>
             {{/*  Anything else/Blog Posts  */}}
             {{else}}
             <li><a href="{{ .Site.BaseURL}}">Home</a></li>
             <li><a href="{{ ref . "about"}}">About</a></li>
             <li><a href="{{ ref . "blog"}}" id="active_page">Blog</a></li>
+            <li><a href="{{ ref . "TG_Selector"}}">TG_Selector</a></li>
             {{end}}
         </ul>
     </nav>

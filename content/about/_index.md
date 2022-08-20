@@ -13,9 +13,9 @@ Things took an even more interesting turn when a computer science teacher told u
 
 Through this EPQ I discovered Cyber Discovery and things took off from there; partaking in the program for its four-year duration; Being invited to attend CyberStart Elite in 2018, 2019 and 2020. The final two years of Elite entailed SANS Courses, I was lucky enough to be invited to take FOR500 and SEC503 gaining the GIAC certs for both, GCFE and GCIA.
 
-For a bit of fun, and a challenge, I poke around with old hard drives to see what they had on them before they were formatted, along with other random projects for things that seem cool to experiment with. I once lost a couple of weeks’ worth of free time trying to get an AI to predict future network activity levels. Some of these projects even get [blog posts!](https://jakentech.com/blog) However most just end up on GitHub.
+For a bit of fun, and a challenge, I poke around with old hard drives to see what they had on them before they were formatted, along with other random projects for things that seem cool to experiment with. I once lost a couple of weeks’ worth of free time trying to get an AI to predict future network activity levels. Some of these projects even get [blog posts!](https://jakentech.com/blog) However, most just end up on GitHub.
 
-Outside of computing I enjoy traveling, binge watching TV series, playing Forza, reading and cooking; Well I say cooking but it tends to end up being a huge mess with one burnt object and another underdone food item on a plate. In this process every Gordon Ramsey meme under the sun gets sent to friends with the occasional free test of the smoke alarm.
+Outside of computing, I enjoy travelling, binge-watching TV series, playing Forza, reading and cooking; Well I say cooking but it tends to end up being a huge mess with one burnt object and another underdone food item on a plate. In this process, every Gordon Ramsey meme under the sun gets sent to friends with the occasional free test of the smoke alarm.
 
 Currently, I'm a final year student at Bournemouth university studying Forensic Computing and Security looking to move into the industry.
 
