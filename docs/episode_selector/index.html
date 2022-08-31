@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+        <base href="https://jakentech.com/">
+        <title>Episode Randomiser - JakeNTech</title>
+        <link rel="shortcut icon" href="/assets/img/favicon.png"/>
+        
+        
+        <link rel="stylesheet" href="https://jakentech.com/sass/style.min.css">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap" rel="stylesheet">
+        
+        <meta property="og:url" content="https://jakentech.com/episode_selector/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Episode Randomiser" />
+        <meta property="og:description" content="It&#39;s my turn to chose a episode to watch" />
+        <meta property="og:image" content="https://jakentech.com/assets/img/tv_duck.png" />
+        
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@JakeNTech" />
+        <meta name="twitter:title" content="Episode Randomiser" />
+        <meta name="twitter:description" content="It&#39;s my turn to chose a episode to watch" />
+        <meta name="twitter:image" content="https://jakentech.com/assets/img/tv_duck.png" />
+        
+        <meta name="description"content="It&#39;s my turn to chose a episode to watch">
+    </head>
+    <body><header>
+    <nav>
+        <ul>
+            
+            
+            <li><a href="https://jakentech.com/">Home</a></li>
+            <li><a href="https://jakentech.com/about/">About</a></li>
+            <li><a href="https://jakentech.com/blog/">Blog</a></li>
+            <li><a href="https://jakentech.com/episode_selector/" id="active_page">Episode_Selector</a></li>
+            
+            
+        </ul>
+    </nav>
+</header>
+<div id="content">
+<main>
+    <article>
+        <div class="bit_under_menu">
+            <h1 class="title">Episode Randomiser</h1>
+            
+            <div id="rainbow"></div>
+        </div>
+        
+        <p>Use the radio buttons below to select a series to watch, then some magic will happen and them wow! You now have an episode to watch!</p>
+<div id="watcher"></div>
+<div>
+    <p>Select TV series:</p>
+    <input type="radio" id="death_in_paradise" name="series" value="death_in_paradise">
+    <label for="Death_in_Paradise">Death In Paradise</label><br>
+    <!-- IT'S BOUQUET -->
+    <input type="radio" id="keeping_up_apperances" name="series" value="keeping_up_apperances">
+    <label for="keeping_up_apperances">Keeping Up Appearances</label><br>
+    <!-- there are too many good quotes -->
+    <input type="radio" id="outnumberd" name="series" value="outnumberd">
+    <label for="outnumberd">Outnumberd</label><br>
+    <!-- cheap_car -->
+    <input type="radio" id="tg_special" name="series" value="tg_special">
+    <label for="tg_special">Top Gear Special</label><br>
+    <!-- not so cheap car -->
+    <input type="radio" id="tg_episode" name="series" value="tg_episode">
+    <label for="tg_episode">Top Gear Episode</label><br>
+    <!-- go go go -->
+    <input type="button" value="Select Episode!" onclick="episode_selection()">
+</div>
+<!-- <button type="button" onclick="display_DiP_episode()">Death in Paradise Episode</button>
+<button type="button" onclick="display_KUA_episode()">Keeping Up appearance's Episode</button>
+<button type="button" onclick="display_Outnumberd_episode()">Outnumbered Episode</button>
+<button type="button" onclick="display_TG_episode()">Top Gear Episode</button>
+<button type="button" onclick="display_TG_special()">Top Gear Special</button> -->
+<script src="/assets/JS/episode_selector.js"></script>
+    </article>
+    <ul>
+    
+    
+    </ul>
+</main>
+
+        </div><footer> 
+    <h4>Powered by <a href="https://gohugo.io/">Hugo</a> using a theme I called <a href="https://github.com/JakeNTech/jakentech.github.io/tree/main/themes/keith">Keith</a>.</h4>
+</footer></body>
+</html>

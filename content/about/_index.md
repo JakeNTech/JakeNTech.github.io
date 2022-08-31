@@ -1,36 +1,35 @@
 ---
-title: "About Me"
+title: "About"
 menu: "about"
 draft: false
 description: "An about section for an about page, Madness I tell you! Madness!"
 artwork: "assets/img/jakeNenaduck.png"
 ---
-My interest in computing started before we got an internet connection at home, although we had dial-up we were never allowed to use it. I ended up playing a tonne of 90's PC games bought from charity shops. Creating “barrel world” in the Legoland PC game? Just me…okay &#128513; I also loved the My Sims games on the Nintendo DS/Wii, am very sad they aren't on the Switch!
+Before we got an internet connection at home I played some rather niche PC and DS games. I cannot tell you how sad I am that the my Sims games aren't on the Nintendo Switch!
 
 I started to mess around with Python and Java after starting at upper school. I have the majority of the Python code from GCSE Computing on [GitHub](https://github.com/JakeNTech/GCSE-Python-Code), it's probably a mistake to put it on there but it makes for a convenient backup at the very least. &#128541;
 
-Things took an even more interesting turn when a computer science teacher told us about a Cyber Security EPQ back in the first few weeks of sixth form. It sounded interesting so I said I'd give it ago. To say it was fascinating would be an understatement. My final research piece was a first-hand look into WannaCry, I still have the hard drive with it installed somewhere at home.
+Things took a turn when a computing teacher told us about a Cyber Security EPQ. It sounded interesting so I said I'd give it ago. To say it was fascinating would be an understatement. My final research piece was a first-hand look into WannaCry, I still have the hard drive with it installed somewhere at home.
 
-Through this EPQ I discovered Cyber Discovery and things took off from there; partaking in the program for its four-year duration; Being invited to attend CyberStart Elite in 2018, 2019 and 2020. The final two years of Elite entailed SANS Courses, I was lucky enough to be invited to take FOR500 and SEC503 gaining the GIAC certs for both, GCFE and GCIA.
+Through this EPQ I discovered Cyber Discovery and wow that was amazing; partaking in the program for its four-year duration. Being invited to attend CyberStart Elite in 2018, 2019 and 2020. With the final two years of Elite entailed SANS Courses, I got the chance to take FOR500 and SEC503 gaining the certs for both (GCFE, GCIA). Now I'm in my final year of a Forensic computing and Security degree at Bournemouth university.
 
-For a bit of fun, and a challenge, I poke around with old hard drives to see what they had on them before they were formatted, along with other random projects for things that seem cool to experiment with. I once lost a couple of weeks’ worth of free time trying to get an AI to predict future network activity levels. Some of these projects even get [blog posts!](https://jakentech.com/blog) However, most just end up on GitHub.
+For a bit of fun, and a challenge, I poke around with old hard drives to see what they had/have on them, along with other random projects for things that seem cool to experiment with. I once lost a couple of weeks’ worth of free time trying to get an AI to predict future network activity levels and temperatures. Some of these projects even get [blog posts!](https://jakentech.com/blog) However, most just end up being abandoned GitHub projects.
 
-Outside of computing, I enjoy travelling, binge-watching TV series, playing Forza, reading and cooking; Well I say cooking but it tends to end up being a huge mess with one burnt object and another underdone food item on a plate. In this process, every Gordon Ramsey meme under the sun gets sent to friends with the occasional free test of the smoke alarm.
-
-Currently, I'm a final year student at Bournemouth university studying Forensic Computing and Security looking to move into the industry.
+I do alot of travelling to look at random places (I really need to go and visit Lyne again!), not enough cooking (Well I say cooking but it tends to end up being a huge mess with one burnt object and another underdone food item on a plate. During this process, every Gordon Ramsey meme gets put through paint.net) and playing Forza Horizon.
 
 Want to see more? Below are some links and an email address for you.
 
 <div class="social_links">
         <ul>
-            <!-- Twitter -->
-            <li><a href="https://twitter.com/jakentech">Twitter</a> - It's that bird app.</li>
-            <!-- GitHub -->
-            <li><a href="https://github.com/jakentech">GitHub</a> - Code is like text but with a funny editor.</li>
             <!-- LinkedIn -->
-            <li><a href="https://www.linkedin.com/in/jake-nenadic-5a8989187/">LinkedIn</a> - A professional profile for professional people.</li>
+            <li><a href="https://www.linkedin.com/in/jake-nenadic-5a8989187/">LinkedIn</a> - A professional profile for professionals.</li>
+            <!-- GitHub -->
+            <li><a href="https://github.com/jakentech">GitHub</a> - loved and unloved projects.</li>
+            <!-- Twitter -->
+            <li><a href="https://twitter.com/jakentech">Twitter</a> - It's that app I spend far too much time on.</li>
             <!-- mail -->
-            <li><a href="mailto:jakentech@gmail.com">Email</a> - How many mailing lists will this address end up on?</li>
+            <li><a href="mailto:jakentech@gmail.com">Email</a> - How many mailing lists will this address end up on I wonder?</li>
+            <!-- My TikTok will never be found! -->
         </ul>
     </div>
 

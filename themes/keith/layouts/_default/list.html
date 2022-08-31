@@ -5,6 +5,8 @@
             <h1 class="title">{{.Title}}</h1>
             {{if (eq .Title "About Me")}}
                 <p id="this_location">Location: 404</p>
+            {{else if (eq .Title "Episode_Selector")}}
+                <p>Do you have the burning desire to watch an episode of something on TV?</p>
             {{end}}
             <div id="rainbow"></div>
         </div>

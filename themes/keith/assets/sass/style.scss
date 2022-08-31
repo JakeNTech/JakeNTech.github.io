@@ -118,7 +118,7 @@ p a{
 	color: $link-color;
 }
 
-button{
+button,input[type=button]{
 	background-color: $pink-color;
 	color: $dark_text-color;
 	text-align: center;

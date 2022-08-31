@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Episode Randomiser on JakeNTech</title>
+    <link>https://jakentech.com/episode_selector/</link>
+    <description>Recent content in Episode Randomiser on JakeNTech</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language><atom:link href="https://jakentech.com/episode_selector/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
