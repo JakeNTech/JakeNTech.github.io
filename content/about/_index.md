@@ -25,8 +25,6 @@ Want to see more? Below are some links and an email address for you.
             <li><a href="https://www.linkedin.com/in/jake-nenadic-5a8989187/">LinkedIn</a> - A professional profile for professionals.</li>
             <!-- GitHub -->
             <li><a href="https://github.com/jakentech">GitHub</a> - loved and unloved projects.</li>
-            <!-- Twitter -->
-            <li><a href="https://twitter.com/jakentech">Twitter</a> - It's that app I spend far too much time on.</li>
             <!-- mail -->
             <li><a href="mailto:jakentech@gmail.com">Email</a> - How many mailing lists will this address end up on I wonder?</li>
             <!-- My TikTok will never be found! -->

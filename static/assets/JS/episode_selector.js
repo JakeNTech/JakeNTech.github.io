@@ -17,6 +17,7 @@ function display_TG_special(){
     special_no = Math.floor((Math.random()*12)+1)
     document.getElementById("watcher").innerHTML = "<p>Top Gear Special Selector:</p><p>"+specials[special_no][0]+" Special</p><p>Series "+specials[special_no][2]+"</p><p>Episode "+specials[special_no][3]+"</p><a href='"+specials[special_no][1]+"'><button>View Episode Details on TMDB</button></a><a href='"+specials[special_no][4]+"'><button>Play on BBC iPlayer</button></a>"
 }
+
 function display_TG_episode(){
     var info_dict = {
         //Series:[total_episodes,[ep_1_iPlayer_link,ep_2_iPlayer_link,..]]
@@ -47,6 +48,7 @@ function display_TG_episode(){
     episode = Math.floor((Math.random()*info_dict[series][0])+1);
     document.getElementById("watcher").innerHTML = "<p>Top Gear Episode Selector:</p><p>Series "+series+"</p><p>Episode "+episode+"</p><a href='https://www.themoviedb.org/tv/45-top-gear/season/"+series+"/episode/"+episode+"'><button>View Episode Details on TMDB</button></a><a href='https://www.bbc.co.uk/iplayer/episode/"+info_dict[series][1][episode-1]+"'><button>Play on BBC iPlayer</button></a>"
 }
+
 function display_DiP_Episode(){
     var episode_dict = {
         //Series:[total_episodes,[ep_1_iPlayer_link,ep_2_iPlayer_link,..]]
@@ -76,6 +78,7 @@ function display_DiP_Episode(){
         document.getElementById("watcher").innerHTML = "<p>Death in Paradise Episode Selector:</p><p>Series "+series+"</p><p>Episode "+episode+"</p><a href='https://www.themoviedb.org/tv/41956-death-in-paradis/season/"+series+"/episode/"+episode+"'><button>View Episode Details on TMDB</button></a><a href='https://www.bbc.co.uk/iplayer/episode/"+episode_dict[series][1][episode-1]+"'><button>Play on BBC iPlayer</button></a>"
     }
 }
+
 function display_KuA_Episode(){
     var episode_dict = {
         //Series:[total_episodes,[ep_1_iPlayer_link,ep_2_iPlayer_link,..]]
@@ -102,6 +105,7 @@ function display_KuA_Episode(){
         document.getElementById("watcher").innerHTML = "<p>Keeping Up Appearances episode selector:</p><p>Series "+series+"</p><p>Episode "+episode+"</p><a href='https://www.themoviedb.org/tv/34-keeping-up-appearances/season/"+series+"/episode/"+episode+"'><button>View Episode Details on TMDB</button></a><a href='https://www.bbc.co.uk/iplayer/episode/"+episode_dict[series][1][episode-1]+"'><button>Play on BBC iPlayer</button></a>"
     }
 }
+
 function display_Outnumberd_Episode(){
     var episode_dict = {
         // Not Avaliable on BBC iPlayer
@@ -128,6 +132,38 @@ function display_Outnumberd_Episode(){
         document.getElementById("watcher").innerHTML = "<p>Outnumbered episode selector:</p><p>Series "+series+"</p><p>Episode "+episode+"</p><a href='https://www.themoviedb.org/tv/12784-outnumberedr/season/"+series+"/episode/"+episode+"'><button>View Episode Details on TMDB</button></a><p>Sadly Outnumbered isn't available on BBC iPlayer :(</p>"
     }
 }
+
+// function display_My_Family_Episode(){
+//     var episode_dict = {
+//         //Series:[total_episodes,[ep_1_iPlayer_link,ep_2_iPlayer_link,..]]
+//         1:[8,["p00bzd7c/my-family-series-1-1-the-serpents-tooth","p00bzd93/my-family-series-1-2-pain-in-the-class?seriesId=p009sv2m","p00bzdbs/my-family-series-1-3-droit-de-seigneur-ben?seriesId=p009sv2m","p00bzdf6/my-family-series-1-4-the-last-resort?seriesId=p009sv2m","p00bzdh2/my-family-series-1-5-farewell-to-alarms?seriesId=p009sv2m","p00bzdjc/my-family-series-1-6-death-takes-a-policy?seriesId=p009sv2m","p009sxtg/my-family-series-1-7-the-awkward-phase?seriesId=p009sv2m","p00bzdkv/my-family-series-1-8-much-ado-about-ben?seriesId=p009sv2m"]],
+//         2:[12,["b007bw17/my-family-series-2-1-all-roads-lead-to-ramon?seriesId=b006xtzs","p00bzdmd/my-family-series-2-2-the-unkindest-cut?seriesId=b006xtzs","p00bzdp9/my-family-series-2-3-parisian-beauty?seriesId=b006xtzs","p00bzdrg/my-family-series-2-4-trust-never-sleeps?seriesId=b006xtzs","p00bzdtp/my-family-series-2-5-death-and-ben-take-a-holiday?seriesId=b006xtzs","p00bzdwm/my-family-series-2-6-driving-miss-crazy?seriesId=b006xtzs","p00bzdyh/my-family-series-2-7-i-second-that-emulsion?seriesId=b006xtzs","p00bzf0c/my-family-series-2-8-age-of-romance?seriesId=b006xtzs","p00bzf2b/my-family-series-2-9-get-cartier?seriesId=b006xtzs","p00bzf46/my-family-series-2-10-tis-pity?seriesId=b006xtzs","p00bzf6b/my-family-series-2-11-the-last-supper?seriesId=b006xtzs","p00bzf8h/my-family-series-2-12-ben-wants-to-be-a-millionaire?seriesId=b006xtzs","p00bzfc3/my-family-series-2-13-breakable?seriesId=b006xtzs"]],
+//         3:[13,[]],
+//         4:[13,[]],
+//         5:[14,[]],
+//         6:[7,[]],
+//         7:[9,[]],
+//         8:[7,[]],
+//         9:[9,[]],
+//         10:[7,[]],
+//         11:[11,[]]
+//     }
+//     // console.log(Object.keys(episode_dict).length)
+//     series = Math.floor((Math.random()*12)+1);
+//     if (series == 12){
+//         // Special,["title",TMDB_link]
+//         var special_dict = {
+
+//         }
+//         special = Math.floor((Math.random()*4)+1);
+//         document.getElementById("watcher").innerHTML = "<p>Outnumbered episode selector, you've got a special!</p><p>"+specials_dict[special][0]+" Special</p><a href='"+specials_dict[special][1]+"'><button>View Episode Details on TMDB</button></a><p>Sadly Outnumbered isn't available on BBC iPlayer</p>"
+//     }
+//     else{
+//         episode = Math.floor((Math.random()*episode_dict[series][0])+1);
+//         document.getElementById("watcher").innerHTML = "<p>My Family Episode Selector:</p><p>Series "+series+"</p><p>Episode "+episode+"</p><a href='https://www.themoviedb.org/tv/643-my-family/season/"+series+"/episode/"+episode+"'><button>View Episode Details on TMDB</button></a><a href='https://www.bbc.co.uk/iplayer/episode/"+episode_dict[series][1][episode-1]+"'><button>Play on BBC iPlayer</button></a>"
+//     }
+// }
+
 function episode_selection(){
     series_selection = document.querySelector('input[name="series"]:checked').value;
     console.log(series_selection)
@@ -146,6 +182,9 @@ function episode_selection(){
     else if (series_selection == "tg_episode"){
         display_TG_episode()
     }
+    // else if (series_selection == "my_family"){
+    //     display_My_Family_Episode()
+    // }
     else{
         alert("I've broken")
     }

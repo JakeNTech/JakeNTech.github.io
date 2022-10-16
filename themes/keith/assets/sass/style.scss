@@ -1,5 +1,5 @@
 // Light/Dark Mode
-$pink-color: #e5559b;
+$pink-color: #EA005E;
 $link-color: #f02d2d;
 
 // Light Mode
@@ -88,22 +88,22 @@ body{
 	font-size: 2rem;
 	margin: 20px auto;
 	padding: 0 10px;
-	max-width: 800px;
+	max-width: 1000px;
 	word-wrap: break-word;
 }
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
 	body {
 	  margin: 10px 0;
 	}
 }
 h1{
 	color: $pink-color;
-	font-weight: normal;
+	// font-weight: normal;
 	font-size: 4rem;
 }
 h2{
 	color: $pink-color;
-	font-weight: normal;
+	// font-weight: normal;
 	font-size: 3rem;
 }
 h3{

@@ -4,9 +4,8 @@
   {{/*  <h1 id="title">{{ .Title }}</h1>  */}}
   <div>
     <div class="blog_header">
-      <h2>{{.Title}}</h2>
-      <p><i>{{ .Date.Format "January 2006" }}</i></p>
-      <p>{{.Description}}</p>
+      <h1>{{.Title}}</h1>
+      <p>{{.Description}} ({{ .Date.Format "January 2006" }})</p>
       {{/*  https://icons.getbootstrap.com/  */}}
     <div id="rainbow"></div>
       <article class="blog_content">
