@@ -15,7 +15,7 @@ function display_TG_special(){
         12:["Patagonia","https://www.themoviedb.org/tv/45-top-gear/season/0/episode/68",22,0,"https://www.bbc.co.uk/iplayer/episode/b04ww8hj/top-gear-patagonia-special-part-1?seriesId=b06hldw6"]
     }
     special_no = Math.floor((Math.random()*12)+1)
-    document.getElementById("watcher").innerHTML = "<p>Top Gear Special Selector:</p><p>"+specials[special_no][0]+" Special</p><p>Series "+specials[special_no][2]+"</p><p>Episode "+specials[special_no][3]+"</p><a href='"+specials[special_no][1]+"'><button>View Episode Details on TMDB</button></a><a href='"+specials[special_no][4]+"'><button>Play on BBC iPlayer</button></a>"
+    document.getElementById("watcher").innerHTML = "<p>Top Gear Special Selector:</p><p>"+specials[special_no][0]+" Special</p><p>Series "+specials[special_no][2]+"</p><p>Episode "+specials[special_no][3]+"</p><a href='"+specials[special_no][1]+"'><button>View Episode Details on TMDB</button></a><a href='"+specials[special_no][4]+"' target='_blank' rel='noopener noreferrer'><button>Play on BBC iPlayer</button></a>"
 }
 
 function display_TG_episode(){
@@ -46,7 +46,7 @@ function display_TG_episode(){
     }
     series = Math.floor((Math.random()*22)+1);
     episode = Math.floor((Math.random()*info_dict[series][0])+1);
-    document.getElementById("watcher").innerHTML = "<p>Top Gear Episode Selector:</p><p>Series "+series+"</p><p>Episode "+episode+"</p><a href='https://www.themoviedb.org/tv/45-top-gear/season/"+series+"/episode/"+episode+"'><button>View Episode Details on TMDB</button></a><a href='https://www.bbc.co.uk/iplayer/episode/"+info_dict[series][1][episode-1]+"'><button>Play on BBC iPlayer</button></a>"
+    document.getElementById("watcher").innerHTML = "<p>Top Gear Episode Selector:</p><p>Series "+series+"</p><p>Episode "+episode+"</p><a href='https://www.themoviedb.org/tv/45-top-gear/season/"+series+"/episode/"+episode+"'><button>View Episode Details on TMDB</button></a><a href='https://www.bbc.co.uk/iplayer/episode/"+info_dict[series][1][episode-1]+"' target='_blank' rel='noopener noreferrer'><button>Play on BBC iPlayer</button></a>"
 }
 
 function display_DiP_Episode(){
@@ -71,11 +71,11 @@ function display_DiP_Episode(){
             1:["Christmas Special","https://www.themoviedb.org/tv/41956-death-in-paradise/season/0/episode/1?language=en-GB","https://www.bbc.co.uk/iplayer/episode/m0012w79/death-in-paradise-christmas-special?seriesId=m000r0pz"]
         }
         special_no = Math.floor((Math.random()*1)+1)
-    document.getElementById("watcher").innerHTML = "<p>Death in Paradise Episode Selector, you've got a special!</p><p>"+specials[special_no][0]+" Special</p><p>Series "+specials[special_no][2]+"</p><p>Episode "+specials[special_no][3]+"</p><a href='"+specials[special_no][1]+"'><button>View Episode Details on TMDB</button></a><a href='"+specials[special_no][4]+"'><button>Play on BBC iPlayer</button></a>"
+    document.getElementById("watcher").innerHTML = "<p>Death in Paradise Episode Selector, you've got a special!</p><p>"+specials[special_no][0]+" Special</p><p>Series "+specials[special_no][2]+"</p><p>Episode "+specials[special_no][3]+"</p><a href='"+specials[special_no][1]+"'><button>View Episode Details on TMDB</button></a><a href='"+specials[special_no][4]+"' target='_blank' rel='noopener noreferrer'><button>Play on BBC iPlayer</button></a>"
     }
     else{
         episode = Math.floor((Math.random()*episode_dict[series][0])+1);
-        document.getElementById("watcher").innerHTML = "<p>Death in Paradise Episode Selector:</p><p>Series "+series+"</p><p>Episode "+episode+"</p><a href='https://www.themoviedb.org/tv/41956-death-in-paradis/season/"+series+"/episode/"+episode+"'><button>View Episode Details on TMDB</button></a><a href='https://www.bbc.co.uk/iplayer/episode/"+episode_dict[series][1][episode-1]+"'><button>Play on BBC iPlayer</button></a>"
+        document.getElementById("watcher").innerHTML = "<p>Death in Paradise Episode Selector:</p><p>Series "+series+"</p><p>Episode "+episode+"</p><a href='https://www.themoviedb.org/tv/41956-death-in-paradis/season/"+series+"/episode/"+episode+"'><button>View Episode Details on TMDB</button></a><a href='https://www.bbc.co.uk/iplayer/episode/"+episode_dict[series][1][episode-1]+"' target='_blank' rel='noopener noreferrer'><button>Play on BBC iPlayer</button></a>"
     }
 }
 
@@ -98,11 +98,11 @@ function display_KuA_Episode(){
             4:["The Farther Christmas Suit","https://www.themoviedb.org/tv/34-keeping-up-appearances/season/0/episode/1?language=en-GB","b007c65w/keeping-up-appearances-the-father-christmas-suit?seriesId=b006xtbg-unindexed"]
         }
         special = Math.floor((Math.random()*4)+1);
-        document.getElementById("watcher").innerHTML = "<p>Keeping Up Appearances, you've got a special!</p><p>"+specials_dict[special][0]+" Special</p><a href='"+specials_dict[special][1]+"'><button>View Episode Details on TMDB</button></a><a href='https://www.bbc.co.uk/iplayer/episode/"+specials_dict[special][2]+"'><button>Play on BBC iPlayer</button></a>"
+        document.getElementById("watcher").innerHTML = "<p>Keeping Up Appearances, you've got a special!</p><p>"+specials_dict[special][0]+" Special</p><a href='"+specials_dict[special][1]+"'><button>View Episode Details on TMDB</button></a><a href='https://www.bbc.co.uk/iplayer/episode/"+specials_dict[special][2]+"' target='_blank' rel='noopener noreferrer'><button>Play on BBC iPlayer</button></a>"
     }
     else{
         episode = Math.floor((Math.random()*episode_dict[series][0])+1);
-        document.getElementById("watcher").innerHTML = "<p>Keeping Up Appearances episode selector:</p><p>Series "+series+"</p><p>Episode "+episode+"</p><a href='https://www.themoviedb.org/tv/34-keeping-up-appearances/season/"+series+"/episode/"+episode+"'><button>View Episode Details on TMDB</button></a><a href='https://www.bbc.co.uk/iplayer/episode/"+episode_dict[series][1][episode-1]+"'><button>Play on BBC iPlayer</button></a>"
+        document.getElementById("watcher").innerHTML = "<p>Keeping Up Appearances episode selector:</p><p>Series "+series+"</p><p>Episode "+episode+"</p><a href='https://www.themoviedb.org/tv/34-keeping-up-appearances/season/"+series+"/episode/"+episode+"'><button>View Episode Details on TMDB</button></a><a href='https://www.bbc.co.uk/iplayer/episode/"+episode_dict[series][1][episode-1]+"' target='_blank' rel='noopener noreferrer'><button>Play on BBC iPlayer</button></a>"
     }
 }
 
