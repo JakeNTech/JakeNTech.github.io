@@ -29,12 +29,12 @@ $dark_grey-color:#808080;
 			}
 		}
 	}
-	.blog_content{
-		figure{
-			figcaption{
-				background-color: $dark_grey-color;
-			}
+	figure{
+		figcaption{
+			background-color: $dark_grey-color;
 		}
+	}
+	.blog_content{
 		table{
 			td, th {
 				border: 1px solid $dark_grey-color;
@@ -61,12 +61,12 @@ $dark_grey-color:#808080;
 			}
 		}
 	}
-	.blog_content{
-		figure{
-			figcaption{
-				background-color: $light_grey-color;
-			}
+	figure{
+		figcaption{
+			background-color: $light_grey-color;
 		}
+	}
+	.blog_content{
 		table{
 			td, th {
 				border: 1px solid $light_grey-color;
@@ -114,8 +114,11 @@ h1 a, h2 a{
 	color: $pink-color;
 	text-decoration: none;
 }
-p a{
+p a, figcaption a{
 	color: $link-color;
+}
+img{
+	max-width: 100%;
 }
 
 button,input[type=button]{
@@ -129,6 +132,15 @@ button,input[type=button]{
 	padding: 1.5rem;
 	margin: 1.5rem;
 	margin-left: 0rem;
+}
+
+figure{
+	align-items: center;
+	text-align: center;
+	figcaption{
+		font-style: italic;
+		padding:1rem;
+	}
 }
 
 // HTML area specific
@@ -210,14 +222,6 @@ footer{
 .blog_content{
 	img{
 		max-width: 100%;
-	}
-	figure{
-		align-items: center;
-		text-align: center;
-		figcaption{
-			font-style: italic;
-			padding:1rem;
-		}
 	}
 	table{
 		//https://www.w3schools.com/html/tryit.asp?filename=tryhtml_table_intro
