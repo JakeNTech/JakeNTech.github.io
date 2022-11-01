@@ -15,12 +15,7 @@ Through this EPQ I discovered Cyber Discovery and wow that was amazing, partakin
 
 For a bit of fun, I poke around with old hard drives to see what they had/have on them along with other random projects for things that seem cool to experiment with. I once lost a couple of weeks’ worth of free time trying to get an AI to predict future network activity levels and temperatures. Some of these projects even get blog posts! However, most just end up being abandoned GitHub projects, don’t feel too bad for them as the code is largely terrible. 
 
-I do a lot of travelling to look at random places, I do need to pay a visit to the village of Lyne again! I’d also say cooking, but it tends to end up being a huge mess with one burnt object and another underdone food item on a plate with no veg or salad because I forgot while trying to not burn everything else. A lot of memes get made with paint.net as well, such as this creation:
-
-<figure>
-  <img src="/assets/img/Bing_Boing_noise.jpg">
-  <figcaption>The IT Crowd Bing Bong noise with me paint.net'ed onto Roy (<a href="https://www.reddit.com/r/funny/comments/75733l/bing_bong_noise/">OG image from reddit</a>)</figcaption>
-</figure>
+I do a lot of travelling to look at random places, I do need to pay a visit to the village of Lyne again! I’d also say cooking, but it tends to end up being a huge mess with one burnt object and another underdone food item on a plate with no veg or salad because I forgot while trying to not burn everything else. 
 
 Want to see more? Below are some links and an email address for you.
 

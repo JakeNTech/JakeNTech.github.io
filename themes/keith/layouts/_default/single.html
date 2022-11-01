@@ -5,7 +5,7 @@
   <div>
     <div class="blog_header">
       <h1>{{.Title}}</h1>
-      <p>{{.Description}} ({{ .Date.Format "January 2006" }})</p>
+      <p>{{.Description}} ({{ .Date.Format "January 2006" }}, {{ .WordCount }} Words)</p>
       {{/*  https://icons.getbootstrap.com/  */}}
     <div id="rainbow"></div>
       <article class="blog_content">
