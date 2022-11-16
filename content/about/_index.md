@@ -22,11 +22,11 @@ Want to see more? Below are some links and an email address for you.
 <div class="social_links">
         <ul>
             <!-- LinkedIn -->
-            <li><a href="https://www.linkedin.com/in/jake-nenadic-5a8989187/">LinkedIn</a> - A professional profile for professionals.</li>
+            <li><a href="https://www.linkedin.com/in/jake-nenadic-5a8989187/" target='_blank' rel='noopener noreferrer'>LinkedIn</a> - A professional profile for professionals.</li>
             <!-- GitHub -->
-            <li><a href="https://github.com/jakentech">GitHub</a> - loved and unloved projects.</li>
+            <li><a href="https://github.com/jakentech" target='_blank' rel='noopener noreferrer'>GitHub</a> - loved and unloved projects.</li>
             <!-- mail -->
-            <li><a href="mailto:jakentech@gmail.com">Email</a> - How many mailing lists will this address end up on I wonder?</li>
+            <li><a href="mailto:jakentech@gmail.com" target='_blank' rel='noopener noreferrer'>Email</a> - How many mailing lists will this address end up on I wonder?</li>
             <!-- My TikTok will never be found! -->
         </ul>
     </div>
