@@ -52,7 +52,11 @@
     <div id="rainbow"></div>
       <article class="blog_content">
           <p>Three years ago, I took an intel stock cooler and hot glued it to an old Western Digital 80GB hard drive and created a piece of art. But what data does it hold? Well with nothing else to do it’s time to break out my Forensics VM and USB Write Blocker and have a snoop around.</p>
-<p>Just from what I can remember this drive was at some point used as a boot drive in our Family PC and a PC I used to mess about when trying to use various old IDE drives and random PCI cards. The drive was already installed in the system when it was passed down to me. It was a Novatech pre-built with 2GB DDR2 and an Intel Celeron D 347 if I can recall correctly. It wasn’t an amazing machine but did the job perfectly. I believe at some point this drive was used to experiment with making a Hackintosh, but as I recall because I got it to work I immediately moved that over to my main SSD instead of using Windows.</p>
+<figure>
+  <img src="/assets/img/blog_images/air_cooled_drive/art.jpg">
+  <figcaption>I don't remember why I did this being honest.</figcaption>
+</figure>
+Just from what I can remember this drive was at some point used as a boot drive in our Family PC and a PC I used to mess about when trying to use various old IDE drives and random PCI cards. The drive was already installed in the system when it was passed down to me. It was a Novatech pre-built with 2GB DDR2 and an Intel Celeron D 347 if I can recall correctly. It wasn’t an amazing machine but did the job perfectly. I believe at some point this drive was used to experiment with making a Hackintosh, but as I recall because I got it to work I immediately moved that over to my main SSD instead of using Windows.
 <p>To kick off the investigation, I connected the drive to a USB write blocker (Courtesy of SANS and Cyber Discovery) and connected it to a Windows 8.1 Virtual machine, I’m odd and really like Windows 8.1. Viewing the drive using FTK Imager shows us, in the hex view, that the drive still contains data. Although the file pane and Windows Explorer shows no files on the drive; Aside from a deleted <code>desktop.ini</code> file that’s in the recycle bin directory.</p>
 <figure>
   <img src="/assets/img/blog_images/air_cooled_drive/FTK.png">
@@ -137,7 +141,7 @@
 </section>
 <aside id="meta">
     <div class="blog_footer">
-      <p><i>1803 Words</i></p>
+      <p><i>1812 Words</i></p>
       <img src="https://jakentech.com/assets/img/blog_images/air_cooled_drive/nice_and_cool.png">
     </div>
 </aside>
