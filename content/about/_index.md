@@ -30,3 +30,20 @@ Want to see more? Below are some links and an email address for you.
             <!-- My TikTok will never be found! -->
         </ul>
     </div>
+<script>
+    var location_dict = {
+        // Number: Line
+        1:"This is a South Western Railway Service to London Waterloo.",
+        2:"M3 The MIDLANDS London, Winchester",
+        3:"M1 The NORTH Luton Airport",
+        4:"London (C & W) A1",
+        5:"A1139 Peterborough, Wisbech (A47) A605 N'hampton, Oundle",
+        6:"M25 (M40, M4) Heathrow Airport",
+        7:"M3 The SOUTH WEST Southampton, London, Richmond",
+        8:"M25 (M4, M40, M1) Heathrow Airport, Watford, Staines",
+        9:"M27 West So'ton Docks, Bournemouth",
+        10:"Crowland Airfield, Peak Hill",
+        11:"Torquay A380, Plymouth A38"
+    }
+    document.getElementById("this_location").innerHTML = "Location: "+location_dict[Math.floor((Math.random()*11)+1)]
+</script>

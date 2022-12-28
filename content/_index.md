@@ -17,10 +17,11 @@ artwork: "assets/img/pure_art.png"
         1:"This is a website, I hope.",
         2:"If lost please return to <a href='https://google.co.uk'>google.co.uk</a>",
         3:"Owner of a low milage duck, 0.7 miles to be specific",
-        4:"DFIR, Computer nerd and maker of snazzy memes",
+        4:"I've got a copy of Paint.Net :)",
         5:"Cyberist in Cyberspace",
         6:"Jake Bullet, Cybernautic detective.",
         7:"How much does a chimney cost? Dunno but it's through the roof at the moment!"
     }
+    
     document.getElementById("the_funny_line").innerHTML = the_third_line[Math.floor((Math.random()*7)+1)]
 </script>
