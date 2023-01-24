@@ -3,7 +3,7 @@ title: "Air Cooled Hard Drive"
 date: 2022-02-19T15:25:42
 draft: false
 description: "What tale does this fantastic piece of artwork have to tell us?"
-artwork: "assets/img/blog_images/air_cooled_drive/nice_and_cool.png"
+artwork: "/assets/img/blog_images/air_cooled_drive/nice_and_cool.png"
 ---
 Three years ago, I took an intel stock cooler and hot glued it to an old Western Digital 80GB hard drive and created a piece of art. But what data does it hold? Well with nothing else to do it’s time to break out my Forensics VM and USB Write Blocker and have a snoop around.
 

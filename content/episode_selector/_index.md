@@ -3,7 +3,7 @@ title: "Episode Randomiser"
 draft: "false"
 menu: "episode_selector"
 description: "It's my turn to chose a episode to watch"
-artwork: "assets/img/tv_duck.png"
+artwork: "/assets/img/tv_duck.png"
 ---
 <p>Use the radio buttons below to select a series to watch, then some magic will happen and them wow! You now have an episode to watch!</p>
 <div id="watcher"></div>
