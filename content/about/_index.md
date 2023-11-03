@@ -11,11 +11,13 @@ I started to mess around with Python and Java after starting at upper school. I 
 
 Things took a turn when a computing teacher told us about a Cyber Security EPQ. It sounded interesting so I said I’d give it ago. To say it was fascinating would be an understatement. My final research piece was a first-hand look into WannaCry, I still have the hard drive with it installed somewhere at home. Should really find that I guess.
 
-Through this EPQ I discovered Cyber Discovery and wow that was amazing, partaking in the program for its four-year duration. Being invited to attend CyberStart Elite in 2018, 2019 and 2020. With the final two years of Elite being SANS Courses, I got the chance to take FOR500 and SEC503 gaining the certs for both (GCFE, GCIA). Now I’m in my final year of a Forensic computing and Security degree at Bournemouth university.
+Through this EPQ I discovered Cyber Discovery and wow that was amazing, partaking in the program for its four-year duration. Being invited to attend CyberStart Elite in 2018, 2019 and 2020. With the final two years of Elite being SANS Courses, I got the chance to take FOR500 and SEC503 gaining the certs for both (GCFE, GCIA). 
+
+Since all this i've graduate with a first class degree from Bournemouth University [(the code for my dissertation/final project can be found here)](https://github.com/JakeNTech/Practitioner-Enhancement-Need-to-know-Intelligence-Scanner/tree/main) and now get to tinker with all things cyber at work.
 
 For a bit of fun, I poke around with old hard drives to see what they had/have on them along with other random projects for things that seem cool to experiment with. I once lost a couple of weeks’ worth of free time trying to get an AI to predict future network activity levels and temperatures. Some of these projects even get blog posts! However, most just end up being abandoned GitHub projects, don’t feel too bad for them as the code is largely terrible. 
 
-I do a lot of travelling to look at random places, I do need to pay a visit to the village of Lyne again! I’d also say cooking, but it tends to end up being a huge mess with one burnt object and another underdone food item on a plate with no veg or salad because I forgot while trying to not burn everything else. 
+I do a lot of driving to look at random places, I do need to pay a visit to the village of Lyne again! I’d also say cooking, but it tends to end up being a huge mess with one burnt object and another underdone food item on a plate with no veg or salad because I forgot while trying to not burn everything else. 
 
 Want to see more? Below are some links and an email address for you.
 
@@ -25,6 +27,8 @@ Want to see more? Below are some links and an email address for you.
             <li><a href="https://www.linkedin.com/in/jake-nenadic-5a8989187/" target='_blank' rel='noopener noreferrer'>LinkedIn</a> - A professional profile for professionals.</li>
             <!-- GitHub -->
             <li><a href="https://github.com/jakentech" target='_blank' rel='noopener noreferrer'>GitHub</a> - loved and unloved projects.</li>
+            <!-- Twitter -->
+            <li><a href="https://twitter.com/JakeNTech" target='_blank' rel='noopener noreferrer'>Twitter</a> - I just miss the bird icon :(</li>
             <!-- mail -->
             <li><a href="mailto:jakentech@gmail.com" target='_blank' rel='noopener noreferrer'>Email</a> - How many mailing lists will this address end up on I wonder?</li>
             <!-- My TikTok will never be found! -->
