@@ -4,7 +4,7 @@ I've tried to make a website using HugoSites!
 ## Commands
 Build for testing:
 ```console
-$ hugo server -D --disableFastRender
+$ ./hugo/hugo server -D --disableFastRender
 $ hugo server -D --disableFastRender --bind 192.168.0.11 --baseURL http://192.168.0.11:1313/
 ```
 

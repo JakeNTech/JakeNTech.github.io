@@ -34,7 +34,6 @@
             
             
             <li><a href="https://jakentech.github.io/">Home</a></li>
-            <li><a href="https://jakentech.github.io/about/">About</a></li>
             <li><a href="https://jakentech.github.io/blog/" id="active_page">Blog</a></li>
             <li><a href="https://memeperhour.lol" target='_blank' rel='noopener noreferrer'>Meme_Portfolio</a></li>
             
@@ -98,7 +97,7 @@ Just from what I can remember this drive was at some point used as a boot drive 
 <p>Straight away I managed to open the SYSTEM file, which contains the key and value:</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;display:grid;"><code class="language-JSON" data-lang="JSON"><span style="display:flex;"><span>{<span style="color:#f92672">&#34;ControlSet001\Control\ComputerName\ComputerName&#34;</span> : <span style="color:#960050;background-color:#1e0010">“JAKE-PC”</span>}</span></span></code></pre></td></tr></table>
@@ -120,7 +119,7 @@ Just from what I can remember this drive was at some point used as a boot drive 
 <p>File names are pulled for these files, along with the addition added by PhotoRec, and a quick scroll through shows mainly system files. As such, based on the file names, I have separated the ones that would be indicative of user activity to have a browse through. To parse these files the below command is used:</p>
 <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>PECmd.exe -d <span style="color:#e6db74">&#34;D:\air_cooled_drive\sorted\.pf\of_interest&#34;</span> --csv <span style="color:#e6db74">&#34;D:\&#34; --csvf &#34;</span>output.csv<span style="color:#e6db74">&#34;</span></span></span></code></pre></td></tr></table>

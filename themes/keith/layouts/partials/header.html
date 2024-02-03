@@ -4,24 +4,15 @@
             {{/*  If the page is the homepage  */}}
             {{if (eq .Title "JakeNTech")}}
             <li><a href="{{ .Site.BaseURL}}" id="active_page">Home</a></li>
-            <li><a href="{{ ref . "about"}}">About</a></li>
-            <li><a href="{{ ref . "blog"}}">Blog</a></li>
-            <li><a href="https://memeperhour.lol" target='_blank' rel='noopener noreferrer'>Meme_Portfolio</a></li>
-            {{/*  About Page  */}}
-            {{else if (eq .Title "About")}}
-            <li><a href="{{ .Site.BaseURL}}">Home</a></li>
-            <li><a href="{{ ref . "about"}}" id="active_page">About</a></li>
             <li><a href="{{ ref . "blog"}}">Blog</a></li>
             <li><a href="https://memeperhour.lol" target='_blank' rel='noopener noreferrer'>Meme_Portfolio</a></li>
             {{else if (eq .Title "Episode Randomiser")}}
             <li><a href="{{ .Site.BaseURL}}">Home</a></li>
-            <li><a href="{{ ref . "about"}}">About</a></li>
             <li><a href="{{ ref . "blog"}}">Blog</a></li>
             <li><a href="https://memeperhour.lol" target='_blank' rel='noopener noreferrer'>Meme_Portfolio</a></li>
             {{/*  Anything else/Blog Posts  */}}
             {{else}}
             <li><a href="{{ .Site.BaseURL}}">Home</a></li>
-            <li><a href="{{ ref . "about"}}">About</a></li>
             <li><a href="{{ ref . "blog"}}" id="active_page">Blog</a></li>
             <li><a href="https://memeperhour.lol" target='_blank' rel='noopener noreferrer'>Meme_Portfolio</a></li>
             {{end}}
