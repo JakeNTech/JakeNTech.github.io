@@ -11,7 +11,7 @@ $ hugo server -D --disableFastRender --bind 192.168.0.11 --baseURL http://192.16
 To build site:
 ```console
 $ rm -r ./docs
-$ hugo -d ./docs --disableKinds=taxonomyTerm
+$ ./hugo/hugo -d ./docs --disableKinds=taxonomyTerm
 ```
 
 To remove metadata from All image files:
